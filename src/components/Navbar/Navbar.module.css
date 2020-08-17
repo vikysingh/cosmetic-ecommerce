@@ -1,0 +1,27 @@
+nav {
+    height: 60px;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #fff;
+}
+
+nav > span {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav > span:nth-child(1) {
+    margin-left: 5%;
+}
+
+nav > span:nth-child(3) {
+    margin-right: 5%;
+}

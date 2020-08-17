@@ -1,0 +1,10 @@
+.LAYOUT {
+    width: 100vw;
+    height: auto;
+
+    overflow-x: hidden;
+}
+
+header, main, footer {
+    width: 100%;
+}
