@@ -1,55 +1,54 @@
 .PRODUCT_CARD {
-    margin: 10px;
-    /* background-color: #eee; */
+    margin: 25px 15px;
     border: none !important;
     width: 20%;
+
+    max-height: 340px;
+    /* background: red; */
     overflow:  hidden !important;
 }
 
-.PRODUCT_CARD_cover_div {
+.PRODUCT_CARD_cover {
+    width: 100%;
+    height: 200px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-.PRODUCT_CARD_cover_div img {
-    width: 80%;
-}
-
-.PRODUCT_CARD h4 {
-    position: absolute;
-    color: #fff;
-    background: #000;
-    width: auto;
-    padding: 7px 20px;
-    left: 15px;
-    top: 15px;
+.PRODUCT_CARD_cover img {
+    width: 70%;
 }
 
 .PRODUCT_CARD_meta {
-    /* margin-left: -5%; */
-    margin-top: 10px;
-    background-color: rgb(243, 243, 243);
-    padding: 10px 0;
-    padding-left: 5%;
+    height: 150px;
+
+    padding-left: 10px;
+    padding-top: 5px;
 }
 
-@media (max-width: 600px) {
+.PRODUCT_CARD_meta h4 {
+    font-size: 0.9rem !important;
+    height: 50px;
+    width: calc(100% - 10px);
 
-    .PRODUCT_CARD {
-        width: 46%;
-        justify-content: start;
-        margin: 5px;
-        height: 280px;
-    }
+    margin: 0;
+}
 
-    .PRODUCT_CARD_cover_div img {
-        width: 90%;
-        margin: auto;
-    }
+.PRODUCT_CARD_meta div {
+    font-size: 0.8rem !important;
+    margin: 0;
+}
 
-    .PRODUCT_CARD_meta {
-        margin-left: -14%;
-        margin-top: -5px;
-    }
+.PRODUCT_CARD_meta button {
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 7%;
+}
+
+.PRODUCT_CARD_meta > button:last-child {
+    border: none !important;
+    margin-left: 0%;
 }

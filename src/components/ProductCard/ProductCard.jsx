@@ -1,25 +1,26 @@
 import React from 'react';
-import { Card } from "antd";
 import styles from "./ProductCard.module.css"
 
-const { Meta } = Card
+import { Typography, Button } from "antd"
 
-function ProductCard({ title, description }) {
+const { Title, Paragraph } = Typography
+
+function ProductCard({ title, description, imgUrl }) {
     return (
-        <Card className={styles.PRODUCT_CARD}
-        cover={
-                <div className={styles.PRODUCT_CARD_cover_div} >
-                <h4>ciao</h4>
-                <img 
-                src="https://d3t32hsnjxo7q6.cloudfront.net/i/2d46e82f21b11f658a4378abcbd1c31b_ra,w158,h184_pa,w158,h184.png" alt="" />
-                </div>
-                }
-        > 
-            <Meta className={styles.PRODUCT_CARD_meta} 
-            title={title} description={description} />
-        </Card>
+        <div className={styles.PRODUCT_CARD}> 
+            <div className={styles.PRODUCT_CARD_cover}>
+                <img src={imgUrl} alt="" />
+            </div>
+            <div className={styles.PRODUCT_CARD_meta}>
+                <Title level={4}> {title} </Title>
+                <Paragraph> {description} </Paragraph>
+                <Button type="primary" size="default" > Add to cart </Button>
+                <Button type="dashed" size="default" > Add to cart </Button>
+            </div>
+        </div>
     )
 }
+//https://d3t32hsnjxo7q6.cloudfront.net/i/991799d3e70b8856686979f8ff6dcfe0_ra,w158,h184_pa,w158,h184.png
 
 
 

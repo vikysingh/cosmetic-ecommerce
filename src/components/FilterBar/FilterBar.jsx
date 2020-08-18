@@ -24,7 +24,7 @@ function FilterBar() {
                 childClass={styles.childSelect}  />
             </div>
 
-            <Input placeholder="Basic usage" />
+            <Input placeholder="Search for products..." />
         </div>
     )
 }
