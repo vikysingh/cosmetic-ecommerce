@@ -1,22 +1,12 @@
 #filterBar {
-    /* background-color: red; */
     height: 8vw;
     width: 100%;
     overflow: hidden;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
     background-color: #eee;
 }
 
 #filterBar > div {
     width: 40%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 
 #filterBar .select {

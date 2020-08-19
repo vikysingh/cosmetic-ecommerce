@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import "./app.css"
-import { Home, Shop } from "./pages"
+import { Home, Shop, ProductDetail } from "./pages"
 import routes from "./constant/routes.json"
 
 function App() {
@@ -13,6 +13,9 @@ function App() {
                 </Route>
                 <Route exact path={routes.shop}>
                     <Shop />
+                </Route>
+                <Route exact path={routes.productDetail}>
+                    <ProductDetail />
                 </Route>
             </Switch>
         </BrowserRouter>

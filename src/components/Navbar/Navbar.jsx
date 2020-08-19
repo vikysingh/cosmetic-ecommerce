@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
-import "./Navbar.module.css"
 
 import { Menu } from "antd"
 import 'antd/dist/antd.css';
+
+import globalStyles from "../../styles/globalStyle.module.css"
+import navStyles from "./Navbar.module.css"
 
 const { SubMenu, ItemGroup, Item } = Menu
 
 function Nav() {
     const [ current, setCurrent ] = useState("")
+    
     return (
-        <nav>
-            <span>logo</span>
+        <nav id={navStyles.NAVBAR} className={globalStyles.flexRowAroundCenter} >
+            <span className={globalStyles.flexAllCenter} id={navStyles.NAVBAR__logo} >logo</span>
 
             <Menu onClick={e => setCurrent(e.key)} selectedKeys={[current]} mode="horizontal" >
                 <Item key="home">
@@ -43,7 +46,7 @@ function Nav() {
                 </Item>
             </Menu>
 
-            <span>features</span>
+            <span className={globalStyles.flexAllCenter} id={navStyles.NAVBAR__user_options}  >features</span>
         </nav>
     )
 }

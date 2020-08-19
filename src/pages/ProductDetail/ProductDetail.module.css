@@ -1,0 +1,20 @@
+#PRODUCT_DETAIL {
+    height: auto;
+    padding: 5vh 0;
+}
+
+#PRODUCT_DETAIL__upper_row {
+    height: 100%;
+}
+
+#PRODUCT_DETAIL__upper_row__right_col > div {
+    width: 85%;
+    margin-top: 4%;
+    font-size: 1rem !important;
+}
+
+@media (max-width: 600px) {
+    #PRODUCT_DETAIL {
+        padding-top: 0;
+    }
+}

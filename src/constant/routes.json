@@ -1,4 +1,5 @@
 {
     "home": "/",
-    "shop": "/shop"
+    "shop": "/shop",
+    "productDetail": "/product/:productId"
 }

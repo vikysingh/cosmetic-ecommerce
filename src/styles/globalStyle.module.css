@@ -1,0 +1,25 @@
+.flexAllCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+
+className structure:
+flex | flex-direction | justify-content | align-itens
+
+*/
+.flexRowAroundCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexColumnStartStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

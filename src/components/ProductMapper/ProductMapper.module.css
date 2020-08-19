@@ -1,16 +1,12 @@
-/* .PRODUCT_MAPPER {
-
-    background: yellow;
-} */
-
-.PRODUCT_MAPPER__HEAD {
+#PRODUCT_MAPPER__HEAD {
     width: 100%;
 }
 
-.PRODUCT_MAPPER__BODY {
-    display: flex;
-    flex-direction: row;
+#PRODUCT_MAPPER__BODY {
+    
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+
+    background-color: #eee;
 }
