@@ -12,12 +12,17 @@ function RightCol({ name, type, price, description }) {
     
     return (
         <div id={styles.RIGHT_COL} >
-            
-            <RightColText name={name} type={type} price={price} description={description} />
-            <RightColQuantity />
-            <Button> Add to cart </Button>
 
-            <PaymentIcons />
+            <div id={styles.RIGHT_COL__upper}>
+                <RightColText name={name} type={type} price={price} description={description} />
+                <RightColQuantity />
+                <Button> Add to cart </Button>
+            </div>
+
+            <div id={styles.RIGHT_COL__lower}>
+                <PaymentIcons />
+            </div>
+
         </div>
     )
 }

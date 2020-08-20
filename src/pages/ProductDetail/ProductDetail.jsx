@@ -4,16 +4,18 @@ import { useParams } from "react-router-dom"
 import styles from "./ProductDetail.module.css"
 
 import useFetch from "../../contexts/useFetchProducts"
-import { LeftCol, RightCol } from '../../components/';
+import { LeftCol, RightCol, Navbar } from '../../components/';
 
 function ProductDetail() {
     
     const { productId } = useParams()
 
-    const { data } = useFetch(`http://makeup-api.herokuapp.com/api/v1/products/${productId}.json`)
+    const { data } = useFetch(`https://makeup-api.herokuapp.com/api/v1/products/${productId}.json`)
+    console.log(data)
 
     return (
         <div id={styles.PRODUCT_DETAIL} >
+            <Navbar />
             {
                 !data ? <h2>loading</h2> : 
                 <Row id={styles.PRODUCT_DETAIL__upper_row} >

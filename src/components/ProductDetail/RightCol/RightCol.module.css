@@ -1,26 +1,41 @@
 #RIGHT_COL {
     padding-top: 2%;
     padding-left: 5%;
+
+    display: grid;
+    grid-template-rows: calc(70vh - 2%) 20vh;
+
+    height: 90vh;
+    overflow: hidden;
 }
 
-#RIGHT_COL h2 {
+#RIGHT_COL__upper {
+    grid-row: 1 / 2;
+}
+
+#RIGHT_COL__lower {
+    grid-row: 2 / -1;
+    padding-top: 3%;
+}
+
+#RIGHT_COL__upper h2 {
     width: 90% !important;
 }
 
-#RIGHT_COL h4 {
+#RIGHT_COL__upper h4 {
     opacity: 0.7;
     text-transform: uppercase;
     font-size: 0.9rem !important;
     margin: 0 !important;
 }
 
-#RIGHT_COL h3 {
+#RIGHT_COL__upper h3 {
     margin: 0;
     margin-top: 4%;
     margin-bottom: 3%;
 }
 
-#RIGHT_COL button {
+#RIGHT_COL__upper button {
     background: rgb(46, 46, 46) !important;
     color: #fff !important;
     width: 40%;
@@ -46,9 +61,8 @@
     width: 36%;
 }
 
-#RIGHT_COL h5 {
+#RIGHT_COL__lower h5 {
     margin-bottom: 2%;
-    margin-top: 8%;
 }
 
 #RIGHT_COL__payment_icons__container > div {
@@ -57,11 +71,23 @@
 }
 
 @media (max-width: 600px) {
-    #RIGHT_COL h2 {
+    #RIGHT_COL {
+        grid-template-rows: auto auto;
+        height: auto;
+        overflow: unset;
+    }
+
+    #RIGHT_COL__upper {
+        /* background-color: red; */
+        height: auto;
+        padding: 5vh 0;
+    }
+
+    #RIGHT_COL__upper h2 {
         font-size: 1.7rem;
     }
 
-    #RIGHT_COL h3 {
+    #RIGHT_COL__upper h3 {
         margin-top: 8%;
         font-size: 1.3rem;
     }
@@ -88,5 +114,13 @@
     
     #RIGHT_COL button {
         width: 92%;
+    }
+
+    #RIGHT_COL__lower {
+        padding-bottom: 5vh;
+    }
+
+    #RIGHT_COL__payment_icons__container {
+        width: 80%;
     }
 }

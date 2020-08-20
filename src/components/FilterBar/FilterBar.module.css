@@ -2,7 +2,8 @@
     height: 8vw;
     width: 100%;
     overflow: hidden;
-    background-color: #eee;
+    background-color: rgb(196, 196, 196);
+    justify-content: start;
 }
 
 #filterBar > div {
@@ -13,9 +14,26 @@
     width: 30%;
 }
 
-
 #filterBar input {
     width: 30%;
     height: 40%;
     border-radius: 20px;
+}
+
+@media (max-width: 600px) {
+    #filterBar {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+
+    #filterBar > div {
+        width: 99%;
+    }
+
+    #filterBar input {
+        width: 80%;
+        height: 40px;
+        margin: 10px 0 0 5%;
+    }
 }

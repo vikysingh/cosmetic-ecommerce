@@ -1,8 +1,10 @@
 #LEFT_COL {
     display: grid;
-    grid-template-rows: 70vh 30vh;
-    height: 100vh;
+    grid-template-rows: 60vh 30vh;
+    height: 90vh;
     overflow: hidden;
+
+    background-color: rgb(245, 245, 245);
 }
 
 #LEFT_COL__upper {
@@ -17,7 +19,6 @@
     grid-row: 2  / -1;
     overflow: hidden;
     justify-content: flex-start;
-
     padding-left: 5%;
 }
 
