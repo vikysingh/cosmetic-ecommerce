@@ -19,7 +19,7 @@ function ProductCard({ title, description, imgUrl, id }) {
                 <Paragraph> {description} </Paragraph>
                 <Button type="primary" size="default" > Add to cart </Button>
                 <Link to={`/product/${id}`} >
-                    <Button type="dashed" size="default" > View More </Button>
+                    <Button size="default" > More info </Button>
                 </Link>
             </div>
         </div>

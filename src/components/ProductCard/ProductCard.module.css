@@ -60,9 +60,8 @@
     padding: 5px 8px;
 }
 
-#PRODUCT_CARD_meta > button:last-child {
+#PRODUCT_CARD_meta > a > button {
     border: none !important;
-    margin-left: 0%;
 }
 
 @media (max-width: 1024px) {

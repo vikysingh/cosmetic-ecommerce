@@ -6,10 +6,12 @@ import styles from "./ProductMapper.module.css"
 import { ProductCard } from "../index"
 import useFetch from "../../contexts/useFetchProducts"
 
-function ProductMapper({ headContent }) {
-    const { data } = useFetch("http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
+import API from "../../constant/API.json"
 
-    return (
+function ProductMapper({ headContent }) {
+    const { data } = useFetch(API.baseUrl + "?brand=maybelline")
+
+    return ( 
         <section id={styles.PRODUCT_MAPPER} >
             <div id={styles.PRODUCT_MAPPER__HEAD}>
                 { headContent }
