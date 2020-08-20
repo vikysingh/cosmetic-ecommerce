@@ -17,7 +17,7 @@ function ProductMapper({ headContent }) {
             <div id={styles.PRODUCT_MAPPER__BODY} className={globalStyles.flexRowAroundCenter}>
                 {
                     !data ? <h3> Loading </h3> : 
-                    data.map(item => <ProductCard key={item.id} title={item.name} 
+                    data.map(item => <ProductCard key={item.id} id={item.id} title={item.name} 
                     description={"€" + item.price} imgUrl={item.api_featured_image} />)
                 }
             </div>

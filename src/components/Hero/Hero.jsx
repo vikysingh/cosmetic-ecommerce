@@ -4,6 +4,8 @@ import { Typography, Button, Row, Col } from 'antd';
 import globalStyles from "../../styles/globalStyle.module.css"
 import heroStyles from "./Hero.module.css"
 
+import { Link } from "react-router-dom"
+
 const { Title, Paragraph } = Typography;
 
 function Hero() {
@@ -18,7 +20,9 @@ function Hero() {
                         <Paragraph id={heroStyles.hero_paragraph} > 
                         Give your dining room a wondrous and inviting look by   introducing </Paragraph>
                     
-                    <Button size="large"  > + SHOP NOW </Button>
+                    <Link to="/shop">
+                        <Button size="large"  > + SHOP NOW </Button>
+                    </Link>
                 </Col>
                 
                 <Col lg={{ span: 12 }} sm={{ span: 24 }} md={{ span: 12 }} 
