@@ -79,6 +79,23 @@
 
 @media (max-width: 600px) {
     #PRODUCT_CARD {
-        width: 80%;
+        width: 40%;
+        max-height: 230px;
+    }
+
+    #PRODUCT_CARD_meta {
+        height: 220px;
+        padding-top: 10px;
+        background-color: rgb(2450, 250, 250);
+    }
+
+    #PRODUCT_CARD_meta button{
+        width: 90%;
+        margin-left: 0%;
+        margin-right: 0;
+    }
+
+    #PRODUCT_CARD:hover > #PRODUCT_CARD_meta {
+        transform: translateY(-220px);
     }
 }

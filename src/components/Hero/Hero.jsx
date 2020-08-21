@@ -4,6 +4,8 @@ import { Typography, Button, Row, Col } from 'antd';
 import globalStyles from "../../styles/globalStyle.module.css"
 import heroStyles from "./Hero.module.css"
 
+import Bg from "../../assets/images/hero_bg.png"
+
 import { Link } from "react-router-dom"
 
 const { Title, Paragraph } = Typography;
@@ -15,7 +17,7 @@ function Hero() {
                 <Col lg={{ span: 12 }} sm={{ span: 24 }} md={{ span: 12 }} 
                 className={globalStyles.flexColumnStartStart}
                 id={heroStyles.hero_text_container} >
-                    <Title> Best selling Dining Chairs For You </Title>
+                    <Title> The makeup shop you've been always looking for </Title>
                     
                         <Paragraph id={heroStyles.hero_paragraph} > 
                         Give your dining room a wondrous and inviting look by   introducing </Paragraph>
@@ -25,10 +27,10 @@ function Hero() {
                     </Link>
                 </Col>
                 
-                <Col lg={{ span: 12 }} sm={{ span: 24 }} md={{ span: 12 }} 
-                className={globalStyles.flexAllCenter}  id={heroStyles.hero_img_container}>
+                <Col lg={{ span: 12 }} sm={{ span: 24 }} md={{ span: 12 }}  id={heroStyles.hero_img_container}
+                >
                     
-                    <img src="https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg" alt="Jewelery" />
+                    <img src={Bg} alt="Jewelery" />
                     
                 </Col>
             </Row>
