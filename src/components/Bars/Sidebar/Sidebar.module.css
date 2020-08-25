@@ -1,0 +1,36 @@
+#SIDEBAR {
+    background-color: #fff;
+    width: 20vw;
+    height: auto;
+    text-align: center;
+    padding-top: 7vh;
+}
+
+#SIDEBAR > h3 {
+    margin-bottom: 5vh;
+}
+
+#SIDEBAR_CARD {
+    height: 100%;
+    width: 100%;
+}
+
+#SIDEBAR_CARD h4 {
+    position: relative;
+    left: -25%;
+    margin: 4vh 0;
+}
+
+#SIDEBAR_CARD > div {
+    background-color: #eee;
+    padding: 3vh 10px;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+#SIDEBAR_CARD label {
+    margin: 5px;
+    background-color: #fff;
+    padding: 5px;
+    cursor: pointer;
+}

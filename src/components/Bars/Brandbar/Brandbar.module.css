@@ -1,0 +1,15 @@
+#BRANDBAR {
+    background-color: #000;
+    height: 60px;
+}
+
+#BRANDBAR > a {
+    /* background-color: red; */
+    text-transform: uppercase;
+    width: 16%;
+    margin: 0 2%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+}

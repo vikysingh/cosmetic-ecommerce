@@ -1,0 +1,56 @@
+#BANNER {
+    width: 90%;
+    height: 65vh;
+
+    margin: 4% auto 0 auto;
+
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#BANNER > div {
+    height: 200px;
+    width: 25%;
+    margin: 5px;
+}
+
+#BANNER > div:nth-child(3) {
+    width: 50%;
+    height: calc(calc(200px*2) + 10px);
+    background-color: #eee;
+}
+
+#BANNER > div:nth-child(3) h3{
+    font-size: 3rem;
+}
+
+#BANNER > div:nth-child(3) img{
+    width: 200px;
+    height: 200px;
+}
+
+@media (max-width: 600px) {
+    #BANNER {
+        width: 100%;
+        height: auto;
+    }
+
+    #BANNER div {
+        width: 90% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #BANNER > div:nth-child(3) {
+        height: 200px;
+    }
+
+    #BANNER > div:nth-child(3) h3 {
+        font-size: 1.3rem;
+    }
+
+    #BANNER > div:nth-child(3) img {
+        width: 100px;
+        height: 100px;
+    }
+}

@@ -17,7 +17,7 @@ function Hero() {
                 <Col lg={{ span: 12 }} sm={{ span: 24 }} md={{ span: 12 }} 
                 className={globalStyles.flexColumnStartStart}
                 id={heroStyles.hero_text_container} >
-                    <Title> The makeup shop you've been always looking for </Title>
+                    <Title level={1} > The makeup shop you've been always looking for </Title>
                     
                         <Paragraph id={heroStyles.hero_paragraph} > 
                         Give your dining room a wondrous and inviting look by   introducing </Paragraph>

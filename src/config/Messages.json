@@ -1,0 +1,8 @@
+{
+    "loading": "Loading...",
+    "error": "Something went error",
+    "search": {
+        "noResults": "No results find to your search"
+    },
+    "empty": "Nothing here"
+}

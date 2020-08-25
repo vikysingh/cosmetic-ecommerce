@@ -65,14 +65,17 @@
     #hero_text_container{
         width: 95%;
         padding-top: 14%;
+        height: unset;
+        padding-bottom: 10%;
     }
 
     #hero_text_container h1 {
-        font-size: 2.5rem;
+        font-size: 3rem !important;
     }
 
     #hero_text_container button {
         width: 95%;
+        margin-top: 10%;
     }
 
     #hero_img_container {

@@ -1,19 +1,20 @@
 import React from 'react';
-import { Layout, Navbar, FilterBar, ProductMapper, Footer } from "../../components"
+import { Navbar, Footer, Sidebar } from "../../components"
+
+import styles from "./Shop.module.css"
 
 function Shop() {
     
     return (
-        <div>
-            <Layout header={
-            <>
+        <div className={styles.SHOP} >
+            <section>
                 <Navbar />
-                <FilterBar />
-            </>
-        } 
-        main={
-            <ProductMapper />
-        } footer={<Footer />} />
+            </section>
+            <section>
+                <Sidebar />
+                <div>producrs</div>
+                <Footer />
+            </section>
         </div>
     )
 }
