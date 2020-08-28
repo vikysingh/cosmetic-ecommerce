@@ -1,5 +1,16 @@
 .SHOP {
-    background-color: red;
     width: 100vw;
     height: auto;
+
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.SHOP > #SHOP__LEFT_COL {
+    grid-column: 1 / 2;
+    width: 100%;
+}
+
+.SHOP > #SHOP__RIGHT_COL {
+    grid-column: 2 / -1;
 }

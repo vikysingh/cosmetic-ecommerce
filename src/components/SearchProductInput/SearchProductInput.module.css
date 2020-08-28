@@ -1,0 +1,20 @@
+#SEARCH_INPUT {
+    width: 90%;
+    height: 10vh;
+    border: none;
+    font-size: 2rem;
+    padding-left: 20px;
+    font-weight: 700;
+    margin: 4vh 0;
+    margin-left: 4vh;
+    
+}
+
+#SEARCH_INPUT::placeholder {
+    color: rgb(220, 220, 220);
+    font-weight: 900;
+}
+
+#SEARCH_INPUT:focus {
+    outline: none;
+}

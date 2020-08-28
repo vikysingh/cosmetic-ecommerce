@@ -1,20 +1,17 @@
 import React from 'react';
-import { Navbar, Footer, Sidebar } from "../../components"
 
 import styles from "./Shop.module.css"
 
-function Shop() {
+function Shop({ leftCol, rightCol }) {
     
     return (
         <div className={styles.SHOP} >
-            <section>
-                <Navbar />
-            </section>
-            <section>
-                <Sidebar />
-                <div>producrs</div>
-                <Footer />
-            </section>
+                <div id={styles.SHOP__LEFT_COL}>
+                    { leftCol }
+                </div>
+                <div id={styles.SHOP__RIGHT_COL}>
+                    { rightCol }
+                </div>
         </div>
     )
 }
