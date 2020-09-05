@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from "prop-types"
+
 import { Typography } from "antd"
  
 import styles from "./BannerCard.module.css"
@@ -20,6 +22,12 @@ function BannerCard({ imgSrc, title, bgColor }) {
             <ShopButton link="/shop" > Shop Now </ShopButton>
         </div>
     )
+} 
+
+BannerCard.propTypes = {
+    imgSrc: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    bgColor: PropTypes.string.isRequired,
 }
 
 export default BannerCard;

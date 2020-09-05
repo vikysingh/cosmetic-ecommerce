@@ -1,7 +1,8 @@
 
 .HOME_product_mapper__head {
     text-align: center;
-    width: 100%;
+    width: 100vw;
     z-index: 20;
-    padding: 5% 0
+    padding: 5% 0;
+    overflow-x: hidden;
 }

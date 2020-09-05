@@ -1,9 +1,11 @@
 import React from 'react'
+import PropTypes from "prop-types"
+
 import styles from "./Sidebar.module.css"
 
 import globalStyles from "../../../styles/globalStyle.module.css"
 
-export default function Sidebarcard({ heading, list }) {
+function Sidebarcard({ heading, list }) {
     return (
         <div id={styles.SIDEBAR_CARD} >
             { heading }
@@ -15,3 +17,10 @@ export default function Sidebarcard({ heading, list }) {
         </div>
     )
 }
+
+Sidebarcard.propTypes = {
+    heading: PropTypes.element,
+    list: PropTypes.array.isRequired
+}
+
+export default Sidebarcard

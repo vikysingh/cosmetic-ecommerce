@@ -1,8 +1,9 @@
 import React from 'react'
 import { Menu, Dropdown } from "antd"
+import PropTypes from "prop-types"
 
 import filters from "../../../constant/filters.json"
-// import globalStyles from "../../../styles/globalStyle.module.css"
+
 
 const { Item } = Menu
 
@@ -19,6 +20,10 @@ function Branddropdown({ label }) {
             <label>{ label } </label>
         </Dropdown>
     )
+}
+
+Branddropdown.propTypes = {
+    label: PropTypes.string.isRequired
 }
 
 export default Branddropdown

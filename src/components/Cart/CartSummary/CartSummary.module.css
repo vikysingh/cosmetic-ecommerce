@@ -1,0 +1,44 @@
+#CART_SUMMARY {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 5px;
+    padding-top: 3%;
+    margin-top: 5%;
+}
+
+#CART_SUMMARY > h4 {
+    margin-bottom: 5%;
+}
+
+#CART_SUMMARY_LABEL {
+    /* background-color: yellow; */
+    justify-content: space-between;
+}
+
+#CART_SUMMARY > div:nth-child(4) {
+    margin-top: 5%;
+}
+
+#CART_SUMMARY_LABEL label {
+    font-weight: 600;
+}
+
+#CART_SUMMARY > div:nth-child(4) > label {
+    font-weight: bolder;
+    margin-top: 5%;
+}
+
+#CART_SUMMARY button {
+    width: 100%;
+    margin-top: 50px;
+    height: 50px;
+}
+
+@media (max-width: 600px) {
+    #CART_SUMMARY {
+        width: 100%;
+        padding: 5%;
+    }
+}

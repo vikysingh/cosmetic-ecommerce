@@ -1,6 +1,6 @@
 import React from 'react';
-
 import {  Typography } from "antd"
+import PropTypes from "prop-types"
 
 import Messages from "../../../config/Messages.json"
 import globalStyles from "../../../styles/globalStyle.module.css"
@@ -15,6 +15,10 @@ function Message({ type }) {
             { type === "error" && Messages.error }
         </Title>
     )
+}
+
+Message.propTypes = {
+    type: PropTypes.string.isRequired
 }
 
 export default Message;

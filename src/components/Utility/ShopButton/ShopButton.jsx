@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from "antd"
 import { Link } from "react-router-dom"
+import PropTypes from "prop-types"
 
 import styles from "./ShopButton.module.css"
 
@@ -12,6 +13,11 @@ function ShopButton({ children, link }) {
             </Button>
         </Link>
     )
+}
+
+ShopButton.propTypes = {
+    children: PropTypes.oneOfType([ PropTypes.string, PropTypes.element ]).isRequired,
+    link: PropTypes.string.isRequired
 }
 
 export default ShopButton;

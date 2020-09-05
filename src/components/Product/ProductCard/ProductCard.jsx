@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom"
+import PropTypes from "prop-types"
 
 import globalStyles from "../../../styles/globalStyle.module.css"
 import cardStyles from "./ProductCard.module.css"
@@ -26,6 +27,12 @@ function ProductCard({ title, description, imgUrl, id }) {
     )
 }
 
+ProductCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    imgUrl: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+}
 
 
 export default ProductCard;

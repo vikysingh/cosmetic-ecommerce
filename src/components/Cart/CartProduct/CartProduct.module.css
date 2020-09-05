@@ -1,0 +1,90 @@
+#CART_PRODUCT {
+    background-color: #fff;
+    width: 100%;
+    height: 200px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-left: 10%;
+}
+
+*:focus {
+    outline: none;
+}
+
+#CART_PRODUCT > img {
+    height: 90%;
+    width: auto;
+    margin: 0;
+}
+
+#CART_PRODUCT > div {
+    width: 65%;
+    height: 60%;
+    padding-left: 10%;
+    align-items: flex-start;
+}
+
+#CART_PRODUCT > div > h4:first-child {
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+#CART_PRODUCT > div > div {
+    margin: 0;
+    height: 40px;
+}
+
+#CART_PRODUCT__quantity_container  {
+    margin-top: 20px !important;
+    padding: 0;
+}
+
+#CART_PRODUCT__quantity_container button, #CART_PRODUCT__quantity_container input {
+    height: 30px;
+    border: 1px solid #000;
+}
+
+#CART_PRODUCT__quantity_container button {
+    background-color: transparent;
+    cursor: pointer;
+    width: 30px;
+}
+
+#CART_PRODUCT__quantity_container input {
+    width: 50px;
+}
+
+#CART_PRODUCT__delete_icon {
+    margin-right: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: red;
+}
+
+@media (max-width: 600px) {
+    #CART_PRODUCT {
+        align-items: center;
+        margin-left: 0;
+    }
+
+    #CART_PRODUCT img {
+        height: 70%;
+    }
+
+    #CART_PRODUCT > div {
+        width: 60%;
+        padding-left: 5%;
+    }
+
+    #CART_PRODUCT__quantity_container {
+        width: 80%;
+    }
+
+    #CART_PRODUCT__quantity_container > div {
+        width: 50%;
+    }
+
+    #CART_PRODUCT__quantity_container input {
+        width: 70%;
+    }
+}
