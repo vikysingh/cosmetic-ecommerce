@@ -5,7 +5,7 @@ export { default as Hero } from "./Hero/Hero"
 export { default as Footer } from "./Footer/Footer"
 // export { default as Layout } from "./Layout/Layout"
 
-export { default as ProductMapper } from "./Product/ProductMapper/ProductMapper"
+export { default as ProductMapper } from "./Product/ProductMapper/Business"
 export { default as ProductCard } from "./Product/ProductCard/ProductCard"
 export { default as ProductQuantity } from "./Product/ProductQuantity/ProductQuantity"
 

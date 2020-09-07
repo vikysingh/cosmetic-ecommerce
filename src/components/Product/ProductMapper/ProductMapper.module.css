@@ -1,12 +1,8 @@
-#PRODUCT_MAPPER__HEAD {
-    width: 100%;
-}
-
-#PRODUCT_MAPPER__BODY {
+#PRODUCT_MAPPER {
     
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap; 
 
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(250, 250, 250);
 }

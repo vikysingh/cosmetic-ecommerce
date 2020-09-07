@@ -2,5 +2,6 @@
     "home": "/",
     "shop": "/shop",
     "productDetail": "/product/:productId",
-    "cart": "/cart"
+    "cart": "/cart",
+    "about": "/about"
 }

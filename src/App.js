@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import "./app.css"
-import { Home, Shop, ProductDetail, Cart } from "./pages"
+import { Home, Shop, ProductDetail, Cart, About } from "./pages"
 import routes from "./constant/routes.json"
 
 import store from "./contexts/redux/store/Store"
@@ -19,6 +19,7 @@ function App() {
     return (
         <BrowserRouter>
             <Switch>
+
                 <Route exact path={routes.home}>
                     <Navbar />
                     <Home>
@@ -26,20 +27,23 @@ function App() {
                         <Brandbar />
                         <Hero />
                         <Banner />
-                        <ProductMapper urlMap="?product_type=eyeliner&brand=revlon" />
+                        <ProductMapper  />
                         <DiscountBanner />
                     </Home>
                     <Footer />
                 </Route>
+
                 <Route path={routes.shop}>
                     <Navbar />
                     <Shop leftCol={ <Sidebar /> } rightCol={
                         <>
                             <SearchProduct />
+                            <ProductMapper  />
                         </>
                     } />
                     <Footer />
                 </Route>
+
                 <Route path={routes.productDetail}>
                     <Navbar />
 
@@ -53,6 +57,7 @@ function App() {
 
                     <Footer />
                 </Route>
+                
                 <Route path={routes.cart}>
                     <Navbar />
                     <Cart rightCol={<CartSummary />}
@@ -71,6 +76,13 @@ function App() {
                     } />
                     <Footer />
                 </Route>
+                    
+                <Route path={routes.about}>
+                    <Navbar />
+                    <About />
+                    <Footer />
+                </Route>
+
             </Switch>
         </BrowserRouter>
     )

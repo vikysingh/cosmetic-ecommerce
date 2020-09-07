@@ -5,25 +5,15 @@ import styles from "./ProductMapper.module.css"
 
 import { ProductCard } from "../../index"
 
-import Message from "../../Utility/Messages/Message"
-import FetchProducts from "../../../contexts/FetchProduct"
-
 function ProductMapper({ urlMap }) {
-
-    let data = null
-
-    React.useEffect(() => {
-        console.log("data1: ", data)
-        FetchProducts(urlMap).then(res => { data = res })
-    })
     
     return ( 
-        <section id={styles.PRODUCT_MAPPER} >
+        <section id={styles.PRODUCT_MAPPER} className={globalStyles.flexRowAroundCenter} >
             {
-                data !== null ? 
-                console.log("data: ", data) : <Message type="loading" /> 
+                urlMap.map(product => <ProductCard title={product.name}
+                    imgUrl={product.image_link} id={product.id} key={product.id}
+                     />)
             }
-            
         </section>
     )
 }

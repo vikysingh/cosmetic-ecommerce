@@ -8,7 +8,7 @@
 
     transition: 500ms all ease;
 
-    box-shadow: 2px 2px 2px 2px #eee;
+    /* box-shadow: 2px 2px 2px 2px #eee; */
 }
 
 #PRODUCT_CARD_cover {
@@ -18,7 +18,7 @@
 }
 
 #PRODUCT_CARD_cover img {
-    width: 50%;
+    width: 35%;
 }
 
 #PRODUCT_CARD_meta {
@@ -29,10 +29,6 @@
     transition: 500ms all ease;
 
     background-color: #fff;
-}
-
-#PRODUCT_CARD:hover {
-    transform: scale(1.2);
 }
 
 #PRODUCT_CARD_meta h4 {
