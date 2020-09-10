@@ -19,5 +19,5 @@ anche se in passato avevo già creato tale applicazione ma essi erano spicifiche
 * AntDesign
 * NPM
 
-### Tecnologia per design
+### Tecnologie per design
 * Figma.com
