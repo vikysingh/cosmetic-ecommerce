@@ -1,0 +1,19 @@
+.flexRowAroundCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexColumnCenterCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexAllCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

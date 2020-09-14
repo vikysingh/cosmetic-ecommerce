@@ -1,28 +1,46 @@
-import React from 'react';
+import React from "react"
+import { Row, Col } from "antd"
+
 import { useParams } from "react-router-dom"
-import styles from "./ProductDetail.module.css"
 
-import useFetch from "../../contexts/useFetchProducts"
+import { ProductDetailLeftCol, ProductDetailRightCol, Navbar, Footer } from "../../components"
 
-import { Grid } from "../../components"
 
-function ProductDetail({ leftCol, rightCol }) {
-    
+export default function ProductDetail() {
+
+    const [ productState, setProductState ] = React.useState({})
+
     const { productId } = useParams()
-    const { data } = useFetch(`https://makeup-api.herokuapp.com/api/v1/products/${productId}.json`)
 
-    return (
-        <div id={styles.PRODUCT_DETAIL} >
+    React.useEffect(() => {
+        fetchProducts()
+    }, [])
+
+    async function fetchProducts() {
+        let response = await fetch(`https://makeup-api.herokuapp.com/api/v1/products/${productId}.json`)
+        let data = await response.json()
+
+        setProductState(data)
+    }
+
+    return <div>
+        <Navbar />
             {
-                !data ? <h2>loading</h2> : 
-                <Grid leftCol={leftCol([ data.image_link, data.api_featured_image ], data.name)}
+                productState.name === undefined ? <h2>loading</h2> :
+                <Row>
+                    <Col span={12}>
+                        <ProductDetailLeftCol imgList={[ productState.image_link, productState.api_featured_image ]}
+                        alt=""
+                        />
+                    </Col>
 
-                rightCol={rightCol(data.name, data.product_type, data.price, data.description)}
-
-                leftSpan={12}  rightSpan={12} />
+                    <Col span={12}>
+                        <ProductDetailRightCol name={productState.name} type={productState.product_type}
+                        price={productState.price} description={productState.description}
+                         />
+                    </Col>
+                </Row>
             }
-        </div>
-    )
+        <Footer />
+    </div>
 }
-
-export default ProductDetail;

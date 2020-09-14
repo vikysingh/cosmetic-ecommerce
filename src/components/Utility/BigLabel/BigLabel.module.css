@@ -1,0 +1,12 @@
+#BIG_LABEL {
+    width: 80%;
+    height: auto;
+
+    font-size: 3rem;
+    font-weight: bolder;
+
+    border: none;
+    margin: 3% 0 3% 10%;
+    
+    text-transform: uppercase;
+}

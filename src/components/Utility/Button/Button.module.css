@@ -1,0 +1,19 @@
+.shop {
+    background-color: #000;
+    color: #fff;
+}
+
+.shop:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.shop_reverse {
+    background-color: #fff;
+    color: #000;
+}
+
+.shop_reverse:hover {
+    background-color: #000;
+    color: #fff;
+}

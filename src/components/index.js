@@ -1,29 +1,16 @@
-export { default as Navbar } from "./Bars/Navbar/Navbar"
-export { default as Brandbar } from "./Bars/Brandbar/Brandbar"
 
-export { default as Hero } from "./Hero/Hero"
-export { default as Footer } from "./Footer/Footer"
-// export { default as Layout } from "./Layout/Layout"
+export { default as Hero } from "./Home/Hero/Hero"
+export { default as ProductBar } from "./Home/ProductBar/ProductBar"
+export { default as DiscountBanner } from "./Home/DiscountBanner/DiscountBanner"
+export { default as Newsletter } from "./Utility/Newsletter/Newsletter"
 
-export { default as ProductMapper } from "./Product/ProductMapper/Business"
-export { default as ProductCard } from "./Product/ProductCard/ProductCard"
-export { default as ProductQuantity } from "./Product/ProductQuantity/ProductQuantity"
+export { default as ThemeButton } from "./Utility/Button/Button"
+export { default as Navbar } from "./Utility/Navbar/Navbar"
+export { default as BigLabel } from "./Utility/BigLabel/BigLabel"
+export { default as Footer } from "./Utility/Footer/Footer"
+export { default as ProductCard } from "./Utility/ProductCard/ProductCard"
+export { default as ProductMapper } from "./Utility/ProductMapper/ProductMapper"
+export { default as Messages } from "./Utility/Messages/Messages"
 
-export { default as LeftCol } from "./ProductDetail/LeftCol/LeftCol"
-export { default as RightCol } from "./ProductDetail/RightCol/RightCol"
-
-export { default as Banner } from "./Banners/Banner/Banner"
-export { default as BannerCard } from "./Banners/BannerCard/BannerCard"
-export { default as DiscountBanner } from "./Banners/DiscountBanner/DiscountBanner"
-
-
-export { default as ShopButton } from "./Utility/ShopButton/ShopButton"
-
-export { default as Sidebar } from "./Bars/Sidebar/Sidebar"
-export { default as SearchProduct } from "./SearchProductInput/SearchProductInput.jsx"
-
-export { default as CartProduct } from "./Cart/CartProduct/CartProduct"
-export { default as CartForm } from "./Cart/CartForm/CartForm"
-export { default as CartSummary } from "./Cart/CartSummary/CartSummary"
-
-export { default as Grid } from "./Utility/Grid/Grid"
+export { default as ProductDetailLeftCol } from "./ProductDetail/LeftCol/LeftCol"
+export { default as ProductDetailRightCol } from "./ProductDetail/RightCol/RightCol"

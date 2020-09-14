@@ -1,0 +1,26 @@
+#PRODUCT_BAR {
+    width: 100vw;
+    height: 10vh;
+    background-color: #000;
+}
+
+#PRODUCT_BAR button {
+    border: none;
+    background-color: unset;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    
+} 
+
+@media (max-width: 600px) {
+    #PRODUCT_BAR {
+        justify-content: start;
+        overflow-x: scroll;
+    }
+
+    #PRODUCT_BAR button {
+        min-width: 45%;
+        font-size: 1.2rem;
+    }
+}

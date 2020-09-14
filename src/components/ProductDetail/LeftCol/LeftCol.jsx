@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from "prop-types"
 
 import styles from "./LeftCol.module.css"
-import globalStyles from "../../../styles/globalStyle.module.css"
+import globalStyles from "../../../styles/Globals.module.css"
 
 function LeftCol({ imgList, alt }) {
 

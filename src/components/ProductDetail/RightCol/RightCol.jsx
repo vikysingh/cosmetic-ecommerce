@@ -1,10 +1,10 @@
 import React from 'react';
 
-import RightColText from './RightColText';
-import RightColQuantity from "./RightColQuantity"
-import PaymentIcons from './PaymentIcons';
+import RightColText from './Childs/RightColText';
+import RightColQuantity from "./Childs/RightColQuantity"
+// import PaymentIcons from './Childs/PaymentIcons';
 
-import { ShopButton } from "../../index"
+//import { ShopButton } from "../../index"
 
 import styles from "./RightCol.module.css"
 
@@ -16,12 +16,12 @@ function RightCol({ name, type, price, description }) {
             <div id={styles.RIGHT_COL__upper}>
                 <RightColText name={name} type={type} price={price} description={description} />
                 <RightColQuantity />
-                <ShopButton link="/cart" > Add to cart </ShopButton>
+                <button link="/cart" > Add to cart </button>
             </div>
 
-            <div id={styles.RIGHT_COL__lower}>
+            {/* <div id={styles.RIGHT_COL__lower}>
                 <PaymentIcons />
-            </div>
+            </div> */}
 
         </div>
     )
