@@ -20,4 +20,4 @@ anche se in passato avevo già creato tale applicazione ma essi erano spicifiche
 * NPM
 
 ### Tecnologie per design
-* Figma.com
+* Figma
