@@ -3,7 +3,7 @@ import { Row, Col } from "antd"
 
 import { useParams } from "react-router-dom"
 
-import { ProductDetailLeftCol, ProductDetailRightCol, Navbar, Footer } from "../../components"
+import { ProductDetailLeftCol, ProductDetailRightCol, Navbar, Footer, Messages } from "../../components"
 
 
 export default function ProductDetail() {
@@ -26,15 +26,15 @@ export default function ProductDetail() {
     return <div>
         <Navbar />
             {
-                productState.name === undefined ? <h2>loading</h2> :
+                productState.name === undefined ? <Messages type="loading" height="100vh" /> :
                 <Row>
-                    <Col span={12}>
+                    <Col lg={12} xs={24}>
                         <ProductDetailLeftCol imgList={[ productState.image_link, productState.api_featured_image ]}
                         alt=""
                         />
                     </Col>
 
-                    <Col span={12}>
+                    <Col lg={12} xs={24}>
                         <ProductDetailRightCol name={productState.name} type={productState.product_type}
                         price={productState.price} description={productState.description}
                          />

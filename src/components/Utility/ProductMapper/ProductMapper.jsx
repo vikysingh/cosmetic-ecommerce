@@ -28,7 +28,8 @@ export default function ProductMapper() {
             !products ? <Messages type='loading' /> :
             <div className={globalStyles.flexRowAroundCenter} >
                 {
-                    products.map(product => <ProductCard key={product.id} imgUrl={product.image_link} />)
+                    products.map(product => <ProductCard id={product.id}
+                        key={product.id} imgUrl={product.image_link} />)
                 }
             </div>
         }

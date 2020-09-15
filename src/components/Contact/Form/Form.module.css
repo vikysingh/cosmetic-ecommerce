@@ -1,0 +1,70 @@
+.CONTACT_FORM {
+    width: 40vw;
+    margin: auto;
+
+    margin-top: 10%;
+    height: 70vh;
+}
+
+.CONTACT_FORM input {
+    height: 40px;   
+}
+
+.CONTACT_FORM input, .CONTACT_FORM textarea {
+    background-color: #eee;
+    color: rgb(82, 82, 82);
+    margin: 8px 0;
+    width: 100%;
+}
+
+.CONTACT_FORM input::placeholder, .CONTACT_FORM textarea::placeholder {
+    color: rgb(107, 107, 107);
+}
+
+.CONTACT_FORM > input:nth-child(2), .CONTACT_FORM > input:nth-child(3) {
+    width: calc(50% - 20px);
+}
+
+.CONTACT_FORM > input:nth-child(2) {
+    margin-right: 20px;
+}
+
+.CONTACT_FORM > input:nth-child(3) {
+    margin-left: 20px;
+}
+
+.CONTACT_FORM button {
+    height: 45px;
+    width: 20%;
+    font-weight: bolder;
+}
+
+@media (max-width: 1024px) and (min-height: 1000px) {
+    .CONTACT_FORM {
+        height: 80vh;
+        width: 70vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .CONTACT_FORM {
+        width: 90vw;
+    }
+
+    .CONTACT_FORM > input:nth-child(2), .CONTACT_FORM > input:nth-child(3) {
+        width: calc(50% - 5px);
+    }
+
+    .CONTACT_FORM > input:nth-child(2) {
+        margin-right: 5px;
+    }
+    
+    .CONTACT_FORM > input:nth-child(3) {
+        margin-left: 5px;
+    }
+
+    .CONTACT_FORM button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}

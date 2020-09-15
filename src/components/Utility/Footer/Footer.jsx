@@ -8,11 +8,13 @@ import PaymentIcon from "react-payment-icons-inline"
 import styles from "./Footer.module.css"
 import globalStyles from "../../../styles/Globals.module.css"
 
+import routes from "../../../constants/routes.json"
+
 export default function Footer() {
     return <footer id={styles.FOOTER}>
         <div>
-            <Link to="/about/spedizione"> Spedizione e restituzione </Link>
-            <Link to="/about/contatti"> Contatti </Link>
+            <Link to="/about/spedizione"> Shipping and returns </Link>
+            <Link to={routes.contact}> Contact </Link>
         </div>
         <div className={globalStyles.flexRowAroundCenter}>
             <div className={globalStyles.flexRowAroundCenter}>

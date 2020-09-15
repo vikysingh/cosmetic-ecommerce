@@ -14,3 +14,5 @@ export { default as Messages } from "./Utility/Messages/Messages"
 
 export { default as ProductDetailLeftCol } from "./ProductDetail/LeftCol/LeftCol"
 export { default as ProductDetailRightCol } from "./ProductDetail/RightCol/RightCol"
+
+export { default as ContactForm } from "./Contact/Form/Form"

@@ -1,9 +1,9 @@
 #LEFT_COL {
     display: grid;
+    height: 100%;
     grid-template-rows: 60vh 30vh;
-    height: 90vh;
+    /* height: auto; */
     overflow: hidden;
-
     background-color: rgb(245, 245, 245);
 }
 
