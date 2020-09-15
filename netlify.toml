@@ -1,0 +1,3 @@
+base = "cosmetic-ecommerce/"
+publish = "cosmetic-ecommerce/build"
+command = "npm run build"
