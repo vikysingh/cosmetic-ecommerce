@@ -15,7 +15,7 @@ function RightColQuantity() {
             <Paragraph > <strong>Quantity</strong> </Paragraph>
 
             <div className={globalStyles.flexRowAroundCenter} id={styles.RIGHT_COL__quantity_container} >
-                <Slider className={styles.PRODUCT_DETAIL__slider}
+                <Slider className={styles.PRODUCT_DETAIL__quantity_slider}
                     min={1}
                     max={10}
                     onChange={e => setInputValue(e)}

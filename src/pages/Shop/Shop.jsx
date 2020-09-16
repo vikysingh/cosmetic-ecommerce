@@ -1,21 +1,16 @@
-import React from 'react';
+import React from "react"
+import { Row, Col } from "antd"
 
-import styles from "./Shop.module.css" 
-import { Grid } from "../../components"
+import { Filterbar, ProductMapper, FilterDisplayer } from "../../components"
 
-function Shop({ leftCol, rightCol }) {
-    
-    return (
-        <div className={styles.SHOP} >
-            <Grid leftCol={leftCol} rightCol={rightCol} leftSpan={6} rightSpan={18} />
-                {/* <div id={styles.SHOP__LEFT_COL}>
-                    { leftCol }
-                </div>
-                <div id={styles.SHOP__RIGHT_COL}>
-                    { rightCol }
-                </div> */}
-        </div>
-    )
+export default function Shop() {
+    return <Row>
+        <Col lg={5}>
+            <Filterbar />
+        </Col>
+        <Col lg={19}>
+            <FilterDisplayer />
+            <ProductMapper />
+        </Col>
+    </Row>
 }
-
-export default Shop;

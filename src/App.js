@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 import routes from "./constants/routes.json"
 
-import { Home, ProductDetail, Contact } from "./pages"
+import { Home, ProductDetail, Contact, Shop } from "./pages"
 
 import { Navbar, Footer } from "./components"
 import "./styles/App.css"
@@ -16,6 +16,12 @@ export default function App() {
                 <Route path={routes.home} exact>
                     <Navbar />
                     <Home />
+                    <Footer />
+                </Route>
+
+                <Route path={routes.shop} exact>
+                    <Navbar />
+                    <Shop />
                     <Footer />
                 </Route>
 

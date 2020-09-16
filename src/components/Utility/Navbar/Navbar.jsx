@@ -9,6 +9,8 @@ import { UserOutlined, ShoppingCartOutlined, MenuOutlined, CloseOutlined } from 
 import globalStyles from "../../../styles/Globals.module.css"
 import navStyles from "./Navbar.module.css"
 
+import routes from "../../../constants/routes.json"
+
 const {  Title } = Typography
 
 function Nav() {
@@ -39,6 +41,12 @@ function Nav() {
             NavCloserRef.current.style.display = "none"
         }
     }
+
+    function closeFromChilds() {
+        if(window.innerWidth <= 600) {
+            close()
+        }
+    }
     
     return (
         <nav id={navStyles.NAVBAR} className={globalStyles.flexRowAroundCenter} >
@@ -55,17 +63,17 @@ function Nav() {
             <div ref={NavContentRef}
             id={navStyles.NAVBAR__content} className={globalStyles.flexRowAroundCenter} >
                 <div id={navStyles.NAVBAR__link_items} className={globalStyles.flexRowAroundCenter}>
-                    <Link onClick={() => close()} to="/" exact> Home </Link>
-                    <Link onClick={() => close()} to="/shop"> Shop </Link>
-                    <Link onClick={() => close()} to="/contact"> Contact us </Link>
+                    <Link onClick={() => closeFromChilds()} to={routes.home} exact> Home </Link>
+                    <Link onClick={() => closeFromChilds()} to={routes.shop}> Shop </Link>
+                    <Link onClick={() => closeFromChilds()} to={routes.contact}> Contact us </Link>
                 </div>
 
                 <span className={globalStyles.flexRowAroundCenter} 
                 id={navStyles.NAVBAR__user_options}>
-                    <Link onClick={() => close()} to="/account" >
+                    <Link onClick={() => closeFromChilds()} to="/account" >
                         <UserOutlined />
                     </Link>
-                    <Link onClick={() => close()} to="/cart" >
+                    <Link onClick={() => closeFromChilds()} to="/cart" >
                         <ShoppingCartOutlined />
                     </Link>
                 </span>

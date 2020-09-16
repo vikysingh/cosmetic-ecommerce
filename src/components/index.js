@@ -16,3 +16,6 @@ export { default as ProductDetailLeftCol } from "./ProductDetail/LeftCol/LeftCol
 export { default as ProductDetailRightCol } from "./ProductDetail/RightCol/RightCol"
 
 export { default as ContactForm } from "./Contact/Form/Form"
+
+export { default as Filterbar } from "./Shop/Filterbar/Filterbar"
+export { default as FilterDisplayer } from "./Shop/FilterDisplayer/FilterDisplayer"

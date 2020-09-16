@@ -1,0 +1,25 @@
+.FILTER {
+    width: 95%;
+    margin-left: 5%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.FILTER h3 {
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.FILTER div {
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.FILTER label {
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}

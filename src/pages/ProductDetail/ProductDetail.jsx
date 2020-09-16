@@ -3,7 +3,7 @@ import { Row, Col } from "antd"
 
 import { useParams } from "react-router-dom"
 
-import { ProductDetailLeftCol, ProductDetailRightCol, Navbar, Footer, Messages } from "../../components"
+import { ProductDetailLeftCol, ProductDetailRightCol, Messages } from "../../components"
 
 
 export default function ProductDetail() {
@@ -23,8 +23,7 @@ export default function ProductDetail() {
         setProductState(data)
     }
 
-    return <div>
-        <Navbar />
+    return <>
             {
                 productState.name === undefined ? <Messages type="loading" height="100vh" /> :
                 <Row>
@@ -41,6 +40,5 @@ export default function ProductDetail() {
                     </Col>
                 </Row>
             }
-        <Footer />
-    </div>
+    </>
 }

@@ -1,0 +1,26 @@
+.PRICE_FILTER {
+    width: 95%;
+    margin-left: 5%;
+    margin-bottom: 5vh;
+}
+
+.PRICE_FILTER h3 {
+    margin-left: 20px;
+}
+
+.PRICE_FILTER > div:nth-child(2) {
+    height: 30px;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.PRICE_FILTER h4 {
+    margin: 0 !important;
+    font-weight: lighter !important;
+    font-size: 1rem;
+}
+
+.PRICE_FILTER__slider {
+    width: 85%;
+    margin-left: 5%;
+}

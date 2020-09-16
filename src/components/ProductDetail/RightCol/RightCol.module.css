@@ -45,12 +45,16 @@
     margin-top: 5%;
 }
 
-.RIGHT_COL__product_description, #RIGHT_COL__quantity_container {
+.RIGHT_COL__product_description {
     width: 90%;
 }
 
-.PRODUCT_DETAIL__slider {
+#RIGHT_COL__quantity_container {
     width: 60%;
+}
+
+.PRODUCT_DETAIL__quantity_slider {
+    width: 50%;
 }
 
 .PRODUCT_DETAIL__quantity_input {
@@ -99,11 +103,12 @@
     #RIGHT_COL__quantity_container {
         flex-direction: column;
         align-items: flex-start;
+        width: 90%;
     }
 
-    .PRODUCT_DETAIL__slider {
+    .PRODUCT_DETAIL__quantity_slider {
         margin-top: 3%;
-        width: 90%;
+        width: 100%;
     }
 
     .PRODUCT_DETAIL__quantity_input {
