@@ -5,10 +5,10 @@ import { Filterbar, ProductMapper, FilterDisplayer } from "../../components"
 
 export default function Shop() {
     return <Row>
-        <Col lg={5}>
+        <Col lg={5} xs={24}>
             <Filterbar />
         </Col>
-        <Col lg={19}>
+        <Col lg={19} xs={24}>
             <FilterDisplayer />
             <ProductMapper />
         </Col>

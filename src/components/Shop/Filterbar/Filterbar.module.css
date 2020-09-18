@@ -3,3 +3,59 @@
     height: 100%;
     border-right: 1px solid #000;
 }
+
+#FILTER_BAR__head {
+    width: 100%;
+    height: 40px;
+    display: none;
+}
+
+#FILTER_BAR__head label {
+    opacity: 0.8;   
+}
+
+#FILTER_BAR__open_icon {
+    font-size: 1.3rem;
+    float: right;
+    margin-right: 15px;
+    padding: 10px;
+    height: 100%;
+    /* display:none; */
+}
+
+#FILTER_BAR__close_icon {
+    display: none;
+}
+
+.FILTER_BAR__open_icon_active {
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+@media (max-width: 600px) {
+
+    .FILTER_BAR__body {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        z-index: 5;
+        background-color: #eee;
+        display: none;
+    }
+
+    #FILTER_BAR__head {
+        display: flex;
+    }
+
+    #FILTER_BAR__close_icon {
+        display: block;
+        float: right;
+        margin-top: 15px;
+        margin-right: 15px;
+        font-size: 1rem;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 50px;
+    }
+}
