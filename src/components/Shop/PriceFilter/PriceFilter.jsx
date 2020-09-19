@@ -1,19 +1,20 @@
 import React from "react"
 import { Slider, Typography } from "antd"
 
+import { connect } from "react-redux"
+import filters from "../../../redux/actions/actionGenerators"
+
 import globalStyles from "../../../styles/Globals.module.css"
 
 import styles from "./PriceFilter.module.css"
 
 const { Title } = Typography
 
-export default function PriceFilter() {
-    function onChange(value) {
-        console.log('onChange: ', value);
-    }
+function PriceFilter({dispatch}) {
       
     function onAfterChange(value) {
-        console.log('onAfterChange: ', value);
+        dispatch(filters.setMinPrice(value[0]))
+        dispatch(filters.setMaxPrice(value[1]))
     }
 
     return <div className={styles.PRICE_FILTER} >
@@ -26,8 +27,11 @@ export default function PriceFilter() {
         range
         step={10}
         defaultValue={[0, 100]}
-        onChange={onChange}
         onAfterChange={onAfterChange}
         />
     </div>
 }
+
+const mapStateToProps = state => ({ dispatch: state.dispatch })
+
+export default connect(mapStateToProps)(PriceFilter)

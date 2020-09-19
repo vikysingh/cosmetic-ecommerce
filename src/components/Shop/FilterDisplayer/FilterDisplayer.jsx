@@ -1,36 +1,33 @@
 import React from "react"
-import { CloseCircleOutlined } from "@ant-design/icons"
 import { Typography } from "antd"
 
-import styles from "./FilterDisplayer.module.css"
+import { connect } from "react-redux"
 
+import styles from "./FilterDisplayer.module.css"
 import globalStyles from "../../../styles/Globals.module.css"
+
+import FilterCard from "./FilterCard"
 
 const { Title } = Typography
 
-export default function FilterDisplayer() {
+function FilterDisplayer({ product, brand, minPrice, maxPrice }) {
     return (
         <div className={globalStyles.flexRowAroundCenter} id={styles.FILTER_DISPLAYER} >
             <Title level={4}> Filters:  </Title>
-
-            <div> 
-                <label>Product: </label>
-                <strong> Eyeliner </strong>
-                <CloseCircleOutlined id={styles.FILTER_DISPLAYER__close_icon} />
-            </div>
-
-            <div> 
-                <label>Brand: </label>
-                <strong> Maybelline </strong>
-                <CloseCircleOutlined id={styles.FILTER_DISPLAYER__close_icon} />
-            </div>
-
-            <div>
-                <label>Price: </label>
-                <strong> €24.00 </strong>
-                <CloseCircleOutlined id={styles.FILTER_DISPLAYER__close_icon} />
-            </div>
-
+            {
+                product === '' && brand === '' && minPrice === 0 && maxPrice === 100 ? 
+                <center> No filters applied </center> :
+                <>
+                    { product !== '' && <FilterCard type="Product" name={product} /> }
+                    { brand !== '' && <FilterCard type="Brand" name={brand} /> }
+                    { minPrice !== 0 && <FilterCard type="Min Price" name={'€'+minPrice} /> }
+                    { maxPrice !== 100 && <FilterCard type="Max price" name={'€'+maxPrice} /> }
+                </>
+            }
         </div>
     )
 }
+
+const mapStateToProps = state => state
+
+export default connect(mapStateToProps)(FilterDisplayer)

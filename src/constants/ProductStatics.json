@@ -1,90 +1,26 @@
 {
     "productType": [
-        {
-            "name": "Blush",
-            "value": "Blush"
-        },
-        {
-            "name": "Bronzer",
-            "value": "Bronzer"
-        },
-        {
-            "name": "Eyebrow",
-            "value": "Eyebrow"
-        },
-        {
-            "name": "Eyeliner",
-            "value": "Eyeliner"
-        },
-        {
-            "name": "Eyeshadow",
-            "value": "Eyeshadow"
-        },
-        {
-            "name": "Foundation",
-            "value": "Foundation"
-        },
-        {
-            "name": "Lip Liner",
-            "value": "Lip Liner"
-        },
-        {
-            "name": "Lipstick",
-            "value": "Lipstick"
-        },
-        {
-            "name": "Mascara",
-            "value": "Mascara"
-        },
-        {
-            "name": "Nail polish",
-            "value": "Nail polish"
-        }
+        "Blush",
+        "Bronzer",
+        "Eyebrow",
+        "Eyeliner",
+        "Eyeshadow",
+        "Foundation",
+        "Lip Liner",
+        "Lipstick",
+        "Mascara",
+        "Nail polish"
     ],
     "brands": [
-        {
-            "name": "benefit",
-            "label": "benefit"
-        },
-        {
-            "name": "covergirl",
-            "label": "covergirl"
-        },
-        {
-            "name": "dalish",
-            "label": "dalish"
-        },
-        {
-            "name": "deciem",
-            "label": "deciem"
-        },
-        {
-            "name": "essie",
-            "label": "essie"
-        },
-        {
-            "name": "fenty",
-            "label": "fenty"
-        },
-        {
-            "name": "glossier",
-            "label": "glossier"
-        },
-        {
-            "name": "iman",
-            "label": "iman"
-        },
-        {
-            "name": "l'oreal",
-            "label": "l'oreal"
-        },
-        {
-            "name": "maybelline",
-            "label": "maybelline"
-        },
-        {
-            "name": "orly",
-            "label": "orly"
-        }
+        "Benefit",
+        "Covergirl",
+        "Dalish",
+        "Essie",
+        "Fenty",
+        "Glossier",
+        "Iman",
+        "L'oreal",
+        "Maybelline",
+        "Orly"
     ]
 }

@@ -12,14 +12,14 @@
     font-size: 1.1rem;
 }
 
-#FILTER_DISPLAYER > div {
+.FILTER_DISPLAYER__filter_card {
     background-color: #eee;
     padding: 5px 10px;
     border-radius: 50px;
     margin: 0 10px;
 }
 
-#FILTER_DISPLAYER > div > strong {
+.FILTER_DISPLAYER__filter_card > strong {
     margin: 0 5px;
 }
 
@@ -36,11 +36,11 @@
         width: 90%;
     }
 
-    #FILTER_DISPLAYER > div:nth-child(2) {
+    /*#FILTER_DISPLAYER > div:nth-child(2) {
         margin-left: 0;
-    }
+    }*/
 
-    #FILTER_DISPLAYER > div {
+    .FILTER_DISPLAYER__filter_card {
         margin: 4px 7px;
     }
 }
