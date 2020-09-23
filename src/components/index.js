@@ -23,3 +23,5 @@ export { default as FilterDisplayer } from "./Shop/FilterDisplayer/FilterDisplay
 
 export { default as MapCartItems } from "./Cart/MapCartItems/MapCartItems"
 export { default as CartBoard} from "./Cart/CartBoard/CartBoard"
+
+export { default as Notice } from "./Notice/Notice"

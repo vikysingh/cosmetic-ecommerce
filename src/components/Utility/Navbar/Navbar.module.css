@@ -79,7 +79,7 @@
         flex-direction: column;
         justify-content: center;
         z-index: 5;
-        margin-top: -5px;
+        margin-top: 60px;
 
         transform: scaleY(0);
         transform-origin: top center;
