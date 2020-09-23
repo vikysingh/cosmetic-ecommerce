@@ -8,26 +8,31 @@ import globalStyles from "../../../styles/Globals.module.css"
 
 import FilterCard from "./FilterCard"
 
+import filters from "../../../redux/actions/filters/filterActionGenerators"
+
 const { Title } = Typography
 
-function FilterDisplayer({ product, brand, minPrice, maxPrice }) {
+function FilterDisplayer({ product, brand, minPrice, maxPrice, dispatch }) {
     return (
         <div className={globalStyles.flexRowAroundCenter} id={styles.FILTER_DISPLAYER} >
-            <Title level={4}> Filters:  </Title>
             {
                 product === '' && brand === '' && minPrice === 0 && maxPrice === 100 ? 
-                <center> No filters applied </center> :
+                <Title level={4}> No filters applied </Title> :
                 <>
-                    { product !== '' && <FilterCard type="Product" name={product} /> }
-                    { brand !== '' && <FilterCard type="Brand" name={brand} /> }
-                    { minPrice !== 0 && <FilterCard type="Min Price" name={'€'+minPrice} /> }
-                    { maxPrice !== 100 && <FilterCard type="Max price" name={'€'+maxPrice} /> }
+                    { product !== '' && <FilterCard type="Product" name={product}
+                    dispatch={dispatch} action={filters.removeProduct} /> }
+                    { brand !== '' && <FilterCard type="Brand" name={brand}
+                    dispatch={dispatch} action={filters.removeBrand} /> }
+                    { minPrice !== 0 && <FilterCard type="Min Price" name={'€'+minPrice}
+                    dispatch={dispatch} action={filters.removeMinPrice} /> }
+                    { maxPrice !== 100 && <FilterCard type="Max price" name={'€'+maxPrice}
+                    dispatch={dispatch} action={filters.removeMaxPrice} /> }
                 </>
             }
         </div>
     )
 }
 
-const mapStateToProps = state => state
+const mapStateToProps = state => state.filters
 
 export default connect(mapStateToProps)(FilterDisplayer)

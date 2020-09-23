@@ -2,7 +2,7 @@ import React from "react"
 import { Slider, Typography } from "antd"
 
 import { connect } from "react-redux"
-import filters from "../../../redux/actions/actionGenerators"
+import filters from "../../../redux/actions/filters/filterActionGenerators"
 
 import globalStyles from "../../../styles/Globals.module.css"
 
@@ -32,6 +32,6 @@ function PriceFilter({dispatch}) {
     </div>
 }
 
-const mapStateToProps = state => ({ dispatch: state.dispatch })
+const mapStateToProps = state => ({ dispatch: state.filters.dispatch })
 
 export default connect(mapStateToProps)(PriceFilter)

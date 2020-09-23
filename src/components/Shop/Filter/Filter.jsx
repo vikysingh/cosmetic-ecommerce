@@ -2,7 +2,7 @@ import React from "react"
 
 import { connect } from "react-redux"
 
-import filters from "../../../redux/actions/actionGenerators"
+import filters from "../../../redux/actions/filters/filterActionGenerators"
 
 import { Typography } from "antd"
 
@@ -11,9 +11,11 @@ import styles from "./Filter.module.css"
 
 const { Title } = Typography
 
-function Filter({ title, filterList, brand, product, type, dispatch }) {
+function Filter({ title, filterList, /*brand, product,*/ type, dispatch }) {
 
     return <div className={styles.FILTER} >
+
+        
 
         <Title level={3}> {title} </Title>
         <div className={globalStyles.flexRowAroundCenter} >
@@ -29,6 +31,6 @@ function Filter({ title, filterList, brand, product, type, dispatch }) {
     </div>
 }
 
-const mapStateToProps = state => state
+const mapStateToProps = state => state.filters
 
 export default connect(mapStateToProps)(Filter)

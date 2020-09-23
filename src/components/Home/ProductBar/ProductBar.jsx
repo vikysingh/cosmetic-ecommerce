@@ -10,7 +10,7 @@ export default function Productbar() {
         <div className={GlobalStyle.flexRowAroundCenter} id={styles.PRODUCT_BAR} >
             {
                 ProductStatics.productType.map(product => <button 
-                    key={product.value + "productbar"}> { product.name } </button>)
+                    key={product}> { product } </button>)
             }
         </div>
     )

@@ -16,8 +16,6 @@ const urls = {
 function ProductMapper({ product, brand, minPrice, maxPrice }) {
     const [ products, setProducts ] = useState(null)
 
-    console.log("PROPS FROM PRODUCT MAPPER: ", product)
-
     useEffect(() => {
         fetchProducts()
     }, [ product, brand, minPrice, maxPrice ])
@@ -28,8 +26,7 @@ function ProductMapper({ product, brand, minPrice, maxPrice }) {
         let data = []
 
         let urlConfig = ''
-
-        //Fetch in base of no filters applied
+        
         if(brand !== '') {
             urlConfig = urls.base + `?product_type=${product}&brand=${brand}&price_greater_than=${minPrice}&price_less_than=${maxPrice}`
         }
@@ -39,24 +36,24 @@ function ProductMapper({ product, brand, minPrice, maxPrice }) {
 
         response = await fetch(urlConfig)
         data = await response.json()
-
         setProducts(data)
     }
 
     return <div id={styles.PRODUCT_MAPPER} >
         {
             !products ? <Messages type='loading' /> :
+            products.length >= 1 ? 
             <div className={globalStyles.flexRowAroundCenter} >
                 {
                     products.map(product => <ProductCard id={product.id}
                         key={product.id} imgUrl={product.image_link} />)
-                }
-            </div>
+                } 
+            </div> : <Messages type="search0" />
         }
     </div>
 }
 
-const mapStateToProps = state => ({ product: state.product, 
-    brand: state.brand, minPrice: state.minPrice, maxPrice: state.maxPrice })
+const mapStateToProps = state => ({ product: state.filters.product, 
+    brand: state.filters.brand, minPrice: state.filters.minPrice, maxPrice: state.filters.maxPrice })
 
 export default connect(mapStateToProps)(ProductMapper)

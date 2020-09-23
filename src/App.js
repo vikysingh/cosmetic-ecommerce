@@ -7,7 +7,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 import routes from "./constants/routes.json"
 
-import { Home, ProductDetail, Contact, Shop } from "./pages"
+import { Home, ProductDetail, Contact, Shop, Cart } from "./pages"
 
 import { Navbar, Footer } from "./components"
 import "./styles/App.css"
@@ -32,6 +32,12 @@ export default function App() {
                     <Route path={routes.productDetail} exact>
                         <Navbar />
                         <ProductDetail />
+                        <Footer />
+                    </Route>
+
+                    <Route path={routes.cart} exact>
+                        <Navbar />
+                        <Cart />
                         <Footer />
                     </Route>
 

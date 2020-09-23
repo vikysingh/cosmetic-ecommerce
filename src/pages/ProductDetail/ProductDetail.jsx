@@ -35,7 +35,7 @@ export default function ProductDetail() {
 
                     <Col lg={12} xs={24}>
                         <ProductDetailRightCol name={productState.name} type={productState.product_type}
-                        price={productState.price} description={productState.description}
+                        price={productState.price} description={productState.description} id={productState.id}
                          />
                     </Col>
                 </Row>

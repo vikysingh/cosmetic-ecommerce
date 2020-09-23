@@ -1,0 +1,16 @@
+#PRODUCT_QUANTITY {
+    width: auto;
+}
+
+#PRODUCT_QUANTITY__btn {
+    padding: 8px;
+    background-color: #eee;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+#PRODUCT_QUANTITY label {
+    width: 30px;
+    text-align: center;
+}
+

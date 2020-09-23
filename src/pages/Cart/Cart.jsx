@@ -1,12 +1,33 @@
 import React from "react"
 
-import { Grid } from "../../components"
+import { Row, Col } from "antd"
 
-function Cart({ leftCol, rightCol }) {
-    return <div style={{ height: "auto" }} >
-        <Grid leftCol={leftCol} rightCol={rightCol}
-        leftSpan={14} rightSpan={10} />
-    </div>
+import { MapCartItems, CartBoard, Messages } from "../../components"
+
+import styles from "./Cart.module.css"
+
+import { connect } from "react-redux"
+
+function Cart({ cart }) {
+    
+    return <Row className={styles.CART} >
+        {
+            cart.length === 0 ? 
+            <Col span={24}> 
+                <Messages type="emptyCart" />
+            </Col>: 
+            <>
+            <Col lg={14} md={14} xs={24}>
+                <MapCartItems />
+            </Col>
+            <Col lg={10} md={10} xs={24}>
+                <CartBoard />
+            </Col>
+            </>
+        }
+    </Row>
 }
 
-export default Cart
+const mapStateToProps = state => state
+
+export default connect(mapStateToProps)(Cart)

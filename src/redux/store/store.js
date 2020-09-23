@@ -1,8 +1,11 @@
-import { createStore } from "redux"
+import { createStore, combineReducers } from "redux"
 
-import filterReducer from "../reducer/reducer"
+import { filterReducer, cartReducer }from "../reducers"
 
-const store = createStore(filterReducer)
+const store = createStore(combineReducers({
+    filters: filterReducer,
+    cart: cartReducer
+}))
 
 store.subscribe(() => console.log("STORE: ", store.getState()))
 

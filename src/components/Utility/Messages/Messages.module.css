@@ -1,6 +1,6 @@
 #MESSAGES {
     width: 100%;
-    height: 100%;
+    height: 60vh;
 }
 
 #MESSAGES h3 {
@@ -11,4 +11,8 @@
 
 #MESSAGES__error {
     color: #FC427B;
+}
+
+#MESSAGES__empty_cart {
+    opacity: 0.8;
 }

@@ -3,17 +3,34 @@
     color: #fff;
 }
 
+.shop a {
+    color: #fff;
+}
+
 .shop:hover {
     background-color: #fff;
     color: #000;
 }
 
+.shop:hover a {
+    color: #000;
+}
+
 .shop_reverse {
     background-color: #fff;
+    border: none;
+    color: #000;
+}
+
+.shop_reverse a {
     color: #000;
 }
 
 .shop_reverse:hover {
     background-color: #000;
+    color: #fff;
+}
+
+.shop_reverse:hover a {
     color: #fff;
 }
