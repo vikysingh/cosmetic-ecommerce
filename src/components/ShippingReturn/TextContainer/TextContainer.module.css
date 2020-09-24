@@ -1,0 +1,15 @@
+.TEXT_CONTAINER {
+    /* width: 60vw; */
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.TEXT_CONTAINER h4 {
+    margin-bottom: 3px;
+}
+
+.TEXT_CONTAINER > div {
+    width: 100%;
+    opacity: 0.8;
+}

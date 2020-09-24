@@ -4,5 +4,6 @@
     "productDetail": "/product/:productId",
     "cart": "/cart",
     "about": "/about",
-    "contact": "/contact"
+    "contact": "/contact",
+    "shippingReturn": "/shippings"
 }

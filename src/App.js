@@ -7,7 +7,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 import routes from "./constants/routes.json"
 
-import { Home, ProductDetail, Contact, Shop, Cart } from "./pages"
+import { Home, ProductDetail, Contact, Shop, Cart, ShippingReturn } from "./pages"
 
 import { Navbar, Footer, Notice } from "./components"
 import "./styles/App.css"
@@ -49,6 +49,13 @@ export default function App() {
                         <Notice />
                         <Navbar />
                         <Contact />
+                        <Footer />
+                    </Route>
+
+                    <Route path={routes.shippingReturn} exact>
+                        <Notice />
+                        <Navbar />
+                        <ShippingReturn />
                         <Footer />
                     </Route>
 

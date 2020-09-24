@@ -13,7 +13,7 @@ import routes from "../../../constants/routes.json"
 export default function Footer() {
     return <footer id={styles.FOOTER}>
         <div>
-            <Link to="/about/spedizione"> Shipping and returns </Link>
+            <Link to={routes.shippingReturn}> Shipping and returns </Link>
             <Link to={routes.contact}> Contact </Link>
         </div>
         <div className={globalStyles.flexRowAroundCenter}>

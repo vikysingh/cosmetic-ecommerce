@@ -1,0 +1,24 @@
+.SHIPPING_RETURN {
+    padding-top: 4%;
+    padding-bottom: 5%;
+    padding-left: 25%;
+}
+
+.SHIPPING_RETURN > h1 {
+    margin-bottom: 60px;
+}
+
+.SHIPPING_RETURN > div {
+    width: 70%;
+}
+
+@media (max-width: 600px) {
+    .SHIPPING_RETURN {
+        padding-left: 5%;
+        width: 100vw;
+    }
+
+    .SHIPPING_RETURN > div {
+        width: 95%;
+    }
+}

@@ -25,3 +25,5 @@ export { default as MapCartItems } from "./Cart/MapCartItems/MapCartItems"
 export { default as CartBoard} from "./Cart/CartBoard/CartBoard"
 
 export { default as Notice } from "./Notice/Notice"
+
+export { default as TextContainer} from "./ShippingReturn/TextContainer/TextContainer"
