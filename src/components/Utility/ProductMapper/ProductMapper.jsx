@@ -46,7 +46,7 @@ function ProductMapper({ product, brand, minPrice, maxPrice }) {
             <div className={globalStyles.flexRowAroundCenter} >
                 {
                     products.map(product => <ProductCard id={product.id}
-                        key={product.id} imgUrl={product.image_link} />)
+                        key={product.id} imgUrl={product.api_featured_image} name={product.name} />)
                 } 
             </div> : <Messages type="search0" />
         }

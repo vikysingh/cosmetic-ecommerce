@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Hero, /*ProductBar,*/ BigLabel, Newsletter, ProductMapper, DiscountBanner } from "../../components"
+import { Hero, /*ProductBar,*/ BigLabel, Newsletter, ProductHomeMapper, DiscountBanner } from "../../components"
 import styles from "./Home.module.css"
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
             <Hero />
             { /* <ProductBar /> */ }
             <BigLabel />
-            <ProductMapper />
+            <ProductHomeMapper />
             <DiscountBanner />
             <Newsletter />
         </div>
