@@ -8,8 +8,8 @@ Tra i principali motivi per cui ho scelto un negozio online come progetto da svi
 In nuovi progetti volevo sperimentare alcune nuove cose, come diverse strutture del progetto, tecnologie e nuovi metodi di sviluppo che ritengo 
 potrebbere facilitare lo sviluppo ed aumantare la produttività.
 
-Oltre a questo, con un negozio online si ha anche la possibilità di avere esperienza con applicazioni **CRUD**, 
-anche se in passato avevo già creato tale applicazione ma essi erano spicifiche a vanilla JS e non ReactJS.
+Oltre a questo, con un negozio online si ha anche la possibilità di avere esperienza con applicazioni **CRUD** e con questo volevo mettere le mie mani
+su Firebae. Anche se in passato avevo già creato tale applicazione, essi erano spicifiche a vanilla JS e non ReactJS.
 
 ### Tecnologie per sviluppo
 * Create-react-app
@@ -21,3 +21,9 @@ anche se in passato avevo già creato tale applicazione ma essi erano spicifiche
 
 ### Tecnologie per design
 * Figma
+
+### Tecnologie per backend(implementazione non effettuata)
+* Firebase
+
+### Piattaforma di deployment/hosting
+* Netlify
