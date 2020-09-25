@@ -14,9 +14,7 @@ const { Title } = Typography
 function Filter({ title, filterList, /*brand, product,*/ type, dispatch }) {
 
     return <div className={styles.FILTER} >
-
         
-
         <Title level={3}> {title} </Title>
         <div className={globalStyles.flexRowAroundCenter} >
             {

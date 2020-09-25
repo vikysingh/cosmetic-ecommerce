@@ -21,10 +21,13 @@ function FilterDisplayer({ product, brand, minPrice, maxPrice, dispatch }) {
                 <>
                     { product !== '' && <FilterCard type="Product" name={product}
                     dispatch={dispatch} action={filters.removeProduct} /> }
+
                     { brand !== '' && <FilterCard type="Brand" name={brand}
                     dispatch={dispatch} action={filters.removeBrand} /> }
+                    
                     { minPrice !== 0 && <FilterCard type="Min Price" name={'€'+minPrice}
                     dispatch={dispatch} action={filters.removeMinPrice} /> }
+                    
                     { maxPrice !== 100 && <FilterCard type="Max price" name={'€'+maxPrice}
                     dispatch={dispatch} action={filters.removeMaxPrice} /> }
                 </>

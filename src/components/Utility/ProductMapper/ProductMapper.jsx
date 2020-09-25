@@ -10,14 +10,16 @@ import globalStyles from "../../../styles/Globals.module.css"
 import Messages from "../Messages/Messages"
 
 const urls = {
-    base: 'https://makeup-api.herokuapp.com/api/v1/products.json'
+    base: 'https://makeup-api.herokuapp.com/api/v1/products.json',
 }
 
 function ProductMapper({ product, brand, minPrice, maxPrice }) {
     const [ products, setProducts ] = useState(null)
 
     useEffect(() => {
+        
         fetchProducts()
+
     }, [ product, brand, minPrice, maxPrice ])
 
     async function fetchProducts() {
@@ -56,4 +58,4 @@ function ProductMapper({ product, brand, minPrice, maxPrice }) {
 const mapStateToProps = state => ({ product: state.filters.product, 
     brand: state.filters.brand, minPrice: state.filters.minPrice, maxPrice: state.filters.maxPrice })
 
-export default connect(mapStateToProps)(ProductMapper)
+export default React.memo(connect(mapStateToProps)(ProductMapper))

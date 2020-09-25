@@ -13,6 +13,10 @@ function RightCol({ name, type, price, description, dispatch, id, state }) {
     let btnRef = React.useRef(null)
 
     React.useEffect(() => {
+        disableButton()
+    }, [ state.cart ])
+
+    function disableButton() {
         if(state.cart.length !== 0) {
             state.cart.map(each => {
                 if(id === each.id) {
@@ -22,7 +26,7 @@ function RightCol({ name, type, price, description, dispatch, id, state }) {
                 }
             })
         }
-    }, [ state ])
+    }
     
     return (
         <div id={styles.RIGHT_COL} >

@@ -70,10 +70,10 @@ function Nav() {
 
                 <span className={globalStyles.flexRowAroundCenter} 
                 id={navStyles.NAVBAR__user_options}>
-                    <Link onClick={() => closeFromChilds()} to="/account" >
+                    <Link onClick={() => closeFromChilds()} to={routes.account} >
                         <UserOutlined />
                     </Link>
-                    <Link onClick={() => closeFromChilds()} to="/cart" >
+                    <Link onClick={() => closeFromChilds()} to={routes.cart} >
                         <ShoppingCartOutlined />
                     </Link>
                 </span>
@@ -82,4 +82,4 @@ function Nav() {
     )
 }
 
-export default Nav;
+export default React.memo(Nav)

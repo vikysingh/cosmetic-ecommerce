@@ -35,6 +35,11 @@
     font-size: 0.9rem;
 }
 
+.CART_CARD__delete_icon {
+    color: red;
+    cursor: pointer;
+}
+
 @media (max-width: 600px) {
     #CART_CARD {
         width: 95%;

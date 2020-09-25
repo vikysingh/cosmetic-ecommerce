@@ -3,13 +3,13 @@ import { Row, Col } from "antd"
 
 import { Filterbar, ProductMapper, FilterDisplayer } from "../../components"
 
-export default function Shop(props) {
+export default function Shop() {
 
     return <Row>
-        <Col lg={5} xs={24}>
+        <Col lg={5} xs={24} md={5}>
             <Filterbar/>
         </Col>
-        <Col lg={19} xs={24}>
+        <Col lg={19} xs={24} md={19}>
             <FilterDisplayer />
             <ProductMapper />
         </Col>

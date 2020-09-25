@@ -3,7 +3,7 @@ import React from "react"
 import globalStyles from "../../../styles/Globals.module.css"
 import styles from "./Messages.module.css"
 
-export default function Messages({ type, height }) {
+function Messages({ type, height }) {
     return <div style={{ height }}
     className={globalStyles.flexAllCenter} id={styles.MESSAGES} >
         { type === 'error' && <h3 id={styles.MESSAGES__error} > Something went wrong... </h3> }
@@ -12,3 +12,5 @@ export default function Messages({ type, height }) {
         { type === 'emptyCart' && <h3 id={styles.MESSAGES__empty_cart} > Your cart is empty </h3> }
     </div>
 }
+
+export default React.memo(Messages)

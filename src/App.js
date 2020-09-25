@@ -13,32 +13,33 @@ import { Navbar, Footer, Notice } from "./components"
 import "./styles/App.css"
 
 export default function App() {
+
     return (
         <Provider store={store} >
             <BrowserRouter>
                 <Switch>
-                    <Route path={routes.home} exact>
+                    <Route path={routes.home} exact={true}>
                         <Notice />
                         <Navbar />
                         <Home />
                         <Footer />
                     </Route>
 
-                    <Route path={routes.shop} exact>
+                    <Route path={routes.shop}>
                         <Notice />
                         <Navbar />
                         <Shop />
                         <Footer />
                     </Route>
 
-                    <Route path={routes.productDetail} exact>
+                    <Route path={routes.productDetail} exact={true}>
                         <Notice />
                         <Navbar />
                         <ProductDetail />
                         <Footer />
                     </Route>
 
-                    <Route path={routes.cart} exact>
+                    <Route path={routes.cart}>
                         <Notice />
                         <Navbar />
                         <Cart />
@@ -52,7 +53,7 @@ export default function App() {
                         <Footer />
                     </Route>
 
-                    <Route path={routes.shippingReturn} exact>
+                    <Route path={routes.shippingReturn}>
                         <Notice />
                         <Navbar />
                         <ShippingReturn />

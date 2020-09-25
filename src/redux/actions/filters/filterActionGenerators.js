@@ -1,5 +1,6 @@
 import { SET_BRAND, SET_PRODUCT, SET_MIN_PRICE, SET_MAX_PRICE, 
-    REMOVE_BRAND, REMOVE_MIN_PRICE, REMOVE_MAX_PRICE, REMOVE_PRODUCT } from "./filterActionTypes"
+    REMOVE_BRAND, REMOVE_MIN_PRICE, REMOVE_MAX_PRICE, REMOVE_PRODUCT, REFRESH_FILTER_FETCH
+ } from "./filterActionTypes"
 
 const setBrand = (brand = '') => ({
     type: SET_BRAND,
@@ -40,6 +41,10 @@ const removeMaxPrice = () => ({
     type: REMOVE_MAX_PRICE,
     payload: 100
 })
+
+// const resfreshFilterFetch = ()  => ({
+//     type: REFRESH_FILTER_FETCH,
+// })
 
 const filters = {
     setBrand,

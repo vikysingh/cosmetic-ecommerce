@@ -5,6 +5,7 @@ import globalStyles from "../../../styles/Globals.module.css"
 
 import CartCard from "../CartCard/CartCard"
 
+import { removeFromCart } from "../../../redux/actions/cart/cartActionGenerators"
 import { connect } from "react-redux"
 
 function Mapcartitems({ cart, dispatch }) {
@@ -29,9 +30,10 @@ function Mapcartitems({ cart, dispatch }) {
         <div id={styles.MAP_CART_ITEMS} className={globalStyles.flexColumnCenterCenter}>
             {
                 items.length === 0 ? <h4>Loading</h4> :
-                items.map(cartiItem => <CartCard imgUrl={cartiItem.imgUrl}
-                name={cartiItem.name} quantity={cart[items.indexOf(cartiItem)].quantity} 
-                id={cartiItem.id} price={cartiItem.price} dispatch={dispatch} />)
+                items.map(cartItem => <CartCard imgUrl={cartItem.imgUrl} key={cartItem.id}
+                name={cartItem.name} quantity={cart[items.indexOf(cartItem)].quantity} 
+                id={cartItem.id} price={cartItem.price} dispatch={dispatch} action={{ removeFromCart }}
+                 />)
             }
         </div>
     )
@@ -39,4 +41,4 @@ function Mapcartitems({ cart, dispatch }) {
 
 const mapStateToProps = state => state
 
-export default connect(mapStateToProps)(Mapcartitems)
+export default React.memo(connect(mapStateToProps)(Mapcartitems))
