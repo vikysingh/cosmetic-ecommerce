@@ -6,25 +6,29 @@ import { PlusOutlined, MinusOutlined } from "@ant-design/icons"
 import globalStyles from "../../../styles/Globals.module.css"
 import styles from "./ProductQuantity.module.css"
 
+import { connect } from "react-redux"
 
-function ProductQuantity({ quantity, setQuantity }) {
+import { increaseQuantity, decreaseQuantity } from "../../../redux/actions/cart/cartActionGenerators"
 
-    //const [ quantity, setQuantity ] = React.useState(1)
+function ProductQuantity({ cartProducts, id, dispatch, quantity }) {
+
+    console.log("log from quantity: ", cartProducts)
 
     return <div className={globalStyles.flexRowStartCenter} id={styles.PRODUCT_QUANTITY} >
         <PlusOutlined id={styles.PRODUCT_QUANTITY__btn}
         onClick={() => {
-            if(quantity < 10) setQuantity(quantity => quantity + 1)
+            dispatch(increaseQuantity(id))
         }}
          />
-            {/* <InputNumber min={1} max={10} defaultValue={1} ref={numbRef} /> */}
             <label > { quantity } </label>
             
         <MinusOutlined id={styles.PRODUCT_QUANTITY__btn} 
         onClick={() => {
-            if(quantity > 1) setQuantity(quantity => quantity -1)
+            dispatch(decreaseQuantity(id))
         }}/>
     </div>
 }
 
-export default ProductQuantity
+const mapStateToProps = state => ({cartProducts: state.cartProducts})
+
+export default React.memo(connect(mapStateToProps)(ProductQuantity))

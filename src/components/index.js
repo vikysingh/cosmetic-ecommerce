@@ -2,6 +2,7 @@
 export { default as Hero } from "./Home/Hero/Hero"
 // export { default as ProductBar } from "./Home/ProductBar/ProductBar"
 export { default as ProductHomeMapper } from "./Home/ProductHomeMapper/ProductHomeMapper"
+export { default as ProductBanner } from "./Home/ProductBanner/ProductBanner"
 export { default as DiscountBanner } from "./Home/DiscountBanner/DiscountBanner"
 
 export { default as Newsletter } from "./Utility/Newsletter/Newsletter"

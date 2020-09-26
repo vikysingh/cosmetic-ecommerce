@@ -4,7 +4,8 @@ import { filterReducer, cartReducer }from "../reducers"
 
 const store = createStore(combineReducers({
     filters: filterReducer,
-    cart: cartReducer
+    cartProducts: cartReducer.productReducer,
+    //cartPricing: cartReducer.pricingReducer
 }))
 
 store.subscribe(() => console.log("STORE: ", store.getState()))

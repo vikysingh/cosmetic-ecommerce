@@ -5,14 +5,13 @@ const initialState = {
         minPrice: 0,
         maxPrice: 100
     },
-    products: [
-        /*
-        {
-            id: product id,
-            price: product price
+    cart: {
+        products: [ /* { id, name, imgUrl, price }  */ ],
+        pricing: {
+            subTotal: 0,
+            shippingPrice: 5.00
         }
-        */
-    ]
+    }
 }
 
 export default initialState
