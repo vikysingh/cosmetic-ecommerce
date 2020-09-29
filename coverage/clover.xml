@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1601363556284" clover="3.2.0">
+  <project timestamp="1601363556284" name="All files">
+    <metrics statements="62" coveredstatements="60" conditionals="36" coveredconditionals="24" methods="18" coveredmethods="18" elements="116" coveredelements="102" complexity="0" loc="62" ncloc="62" packages="4" files="9" classes="9"/>
+    <package name="redux.actions.cart">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="cartActionGenerators.js" path="C:\react-projects\cosmetic-ecommerce\src\redux\actions\cart\cartActionGenerators.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+      </file>
+      <file name="cartActionTypes.js" path="C:\react-projects\cosmetic-ecommerce\src\redux\actions\cart\cartActionTypes.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="redux.actions.filters">
+      <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="8"/>
+      <file name="filterActionGenerators.js" path="C:\react-projects\cosmetic-ecommerce\src\redux\actions\filters\filterActionGenerators.js">
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="8"/>
+        <line num="5" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="10" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="15" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="20" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+      </file>
+      <file name="filterActionTypes.js" path="C:\react-projects\cosmetic-ecommerce\src\redux\actions\filters\filterActionTypes.js">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="redux.reducers">
+      <metrics statements="35" coveredstatements="33" conditionals="32" coveredconditionals="24" methods="6" coveredmethods="6"/>
+      <file name="cartReducer.js" path="C:\react-projects\cosmetic-ecommerce\src\redux\reducers\cartReducer.js">
+        <metrics statements="24" coveredstatements="23" conditionals="22" coveredconditionals="16" methods="5" coveredmethods="5"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="16" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="29" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="45" count="4" type="cond" truecount="4" falsecount="1"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+      </file>
+      <file name="filterReducer.js" path="C:\react-projects\cosmetic-ecommerce\src\redux\reducers\filterReducer.js">
+        <metrics statements="10" coveredstatements="9" conditionals="10" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="7" count="8" type="cond" truecount="8" falsecount="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+      </file>
+      <file name="index.js" path="C:\react-projects\cosmetic-ecommerce\src\redux\reducers\index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="initialState.js" path="C:\react-projects\cosmetic-ecommerce\src\redux\reducers\initialState.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="test_files">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="dummyTestData.js" path="C:\react-projects\cosmetic-ecommerce\src\test_files\dummyTestData.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
