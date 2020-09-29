@@ -8,7 +8,7 @@ import routes from "../../../constants/routes.json"
 import { connect } from "react-redux"
 
 import { setProduct } from "../../../redux/actions/filters/filterActionGenerators"
-
+import PropTypes from "prop-types"
 
 const { Title } = Typography
 
@@ -21,6 +21,11 @@ function Productbannercard({ imgSrc, text, dispatch, productType}) {
             <Title level={3}> { text } </Title>
         </Link>
     )
+}
+
+Productbannercard.propTypes = {
+    imgSrc: PropTypes.string.isRequired,
+    text: PropTypes.string
 }
 
 const mapStateToProps = state => state

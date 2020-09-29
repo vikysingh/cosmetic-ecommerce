@@ -17,4 +17,3 @@ export default function ProductBanner() {
         <ProductBannerCard imgSrc={makeupFace} text="FACE" productType={ProductStatics.productType[5]} />
     </div>
 }
-//ProductStatics.productType[3]
