@@ -9,7 +9,7 @@ import AboutImg from "../../../assets/images/foundation_banner.jpg"
 
 const { Title } = Typography
 
-export default function About() {
+export default function DiscountBanner() {
     return <Row id={styles.ABOUT} >
         <Col lg={10} md={10} xs={24} id={styles.ABOUT__left_col} >
             <Title level={1} >-25%</Title>

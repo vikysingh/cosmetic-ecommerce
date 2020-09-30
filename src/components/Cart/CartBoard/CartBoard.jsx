@@ -6,12 +6,15 @@ import globalStyles from "../../../styles/Globals.module.css"
 import styles from "./CartBoard.module.css"
  
 import { ThemeButton } from "../../index"
+import PropTypes from 'prop-types'
+
+import { Link } from "react-router-dom"
+
+import routes from "../../../constants/routes.json"
 
 const { Title } = Typography
 
 function CartBoard({ subtotal, shippingPrice, total }) {
-
-    console.log("sbu from board: ", subtotal)
 
     return <div className={styles.CART_BOARD} >
         <Title level={3}> Order Summary </Title>
@@ -29,8 +32,14 @@ function CartBoard({ subtotal, shippingPrice, total }) {
             <Title level={4}> Total </Title>
             <strong> €{total} </strong> 
         </div>
-        <ThemeButton theme="shop" > Go to checkout </ThemeButton>
+        <ThemeButton theme="shop" > <Link to={routes.checkoutAddress} >Go to checkout</Link> </ThemeButton>
     </div>
+}
+
+CartBoard.propTypes = {
+    subtotal: PropTypes.number.isRequired,
+    shippingPrice: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired
 }
 
 

@@ -7,11 +7,9 @@ import CartCard from "../CartCard/CartCard"
 
 import { removeFromCart } from "../../../redux/actions/cart/cartActionGenerators"
 
+import PropTypes from "prop-types"
+
 function Mapcartitems({ productList, dispatch }) {
- 
-    React.useEffect(() => {
-        console.log("CART from cart: ", productList);
-    }, [productList])
     
     return (
         <div id={styles.MAP_CART_ITEMS} className={globalStyles.flexColumnCenterCenter}>
@@ -24,6 +22,10 @@ function Mapcartitems({ productList, dispatch }) {
             }
         </div>
     )
+}
+
+Mapcartitems.propTypes = {
+    productsList: PropTypes.array
 }
 
 export default React.memo(Mapcartitems)

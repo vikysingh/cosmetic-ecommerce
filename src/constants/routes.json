@@ -6,5 +6,6 @@
     "about": "/about",
     "contact": "/contact",
     "shippingReturn": "/shippings",
-    "account": "/account"
+    "checkoutAddress": "/checkout/address",
+    "checkoutPayment": "/checkout/payment"
 }

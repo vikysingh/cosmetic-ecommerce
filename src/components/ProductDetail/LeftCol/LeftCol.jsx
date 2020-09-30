@@ -25,7 +25,7 @@ function LeftCol({ imgList, alt }) {
 
 LeftCol.propTypes = {
     imgList: PropTypes.array.isRequired,
-    alt: PropTypes.string.isRequired
+    alt: PropTypes.string
 }
 
 export default LeftCol;

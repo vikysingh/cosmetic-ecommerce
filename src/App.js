@@ -7,9 +7,9 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 import routes from "./constants/routes.json"
 
-import { Home, ProductDetail, Contact, Shop, Cart, ShippingReturn } from "./pages"
+import { Home, ProductDetail, Contact, Shop, Cart, ShippingReturn, Checkout } from "./pages"
 
-import { Navbar, Footer, Notice } from "./components"
+import { Navbar, Footer, Notice, AddressInfo, PaymentLeftCol } from "./components"
 import "./styles/App.css"
 
 export default function App() {
@@ -57,6 +57,20 @@ export default function App() {
                         <Notice />
                         <Navbar />
                         <ShippingReturn />
+                        <Footer />
+                    </Route>
+
+                    <Route path={routes.checkoutAddress}>
+                        <Notice />
+                        <Navbar />
+                        <Checkout leftCol={<AddressInfo />} />
+                        <Footer />
+                    </Route>
+
+                    <Route path={routes.checkoutPayment}>
+                        <Notice />
+                        <Navbar />
+                        <Checkout leftCol={<PaymentLeftCol />} />
                         <Footer />
                     </Route>
 

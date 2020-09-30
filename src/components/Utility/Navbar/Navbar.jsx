@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { Typography } from "antd"
 import 'antd/dist/antd.css';
 
-import { UserOutlined, ShoppingCartOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons"
+import { /*UserOutlined,*/ ShoppingCartOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons"
 
 import globalStyles from "../../../styles/Globals.module.css"
 import navStyles from "./Navbar.module.css"
@@ -70,9 +70,9 @@ function Nav() {
 
                 <span className={globalStyles.flexRowAroundCenter} 
                 id={navStyles.NAVBAR__user_options}>
-                    <Link onClick={() => closeFromChilds()} to={routes.account} >
+                    {/* <Link onClick={() => closeFromChilds()} to={routes.account} >
                         <UserOutlined />
-                    </Link>
+                    </Link> */}
                     <Link onClick={() => closeFromChilds()} to={routes.cart} >
                         <ShoppingCartOutlined />
                     </Link>

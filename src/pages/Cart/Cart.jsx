@@ -9,11 +9,13 @@ import styles from "./Cart.module.css"
 
 import { connect } from "react-redux"
 
+import PropTypes from "prop-types"
+
 function Cart({ cartProducts, dispatch }) {
 
     const [ subTotalPrice, setSubtotalPrice ] = React.useState(0)
 
-    const shippingPrice = 5.00
+    const shippingPrice = 0
     
     React.useEffect(() => {
         setSubtotal()
@@ -40,13 +42,17 @@ function Cart({ cartProducts, dispatch }) {
                 <MapCartItems productList={cartProducts} dispatch={dispatch}/> 
             </Col>
             <Col lg={10} md={10} xs={24}>
-                <CartBoard subtotal={subTotalPrice} 
+                <CartBoard subtotal={parseFloat(subTotalPrice)} 
                 shippingPrice={shippingPrice}
-                total={(subTotalPrice + shippingPrice)} />
+                total={parseFloat(subTotalPrice + shippingPrice)} />
             </Col>
             </>
         }
     </Row>
+}
+
+Cart.propTypes = {
+    cartProducts: PropTypes.array.isRequired
 }
 
 const mapStateToProps = state => state

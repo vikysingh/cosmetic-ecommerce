@@ -2,13 +2,13 @@
     padding-top: 5%;
     padding-bottom: 5%;
     background-color: #eee;
-    min-height: 80vh;
+    /* min-height: 80vh; */
+    height: auto;
     overflow: hidden;
 }
 
 #PRODUCT_MAPPER div {
     width: 100%;
-    /* background-color: red; */
     flex-wrap: wrap;
     margin-left: 4vw;
     justify-content: start;

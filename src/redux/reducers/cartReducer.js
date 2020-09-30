@@ -2,7 +2,7 @@ import initialState from "./initialState"
 
 import { ADD_TO_CART, REMOVE_FROM_CART, INCREASE_QUANTITY, DECREASE_QUANTITY } from "../actions/cart/cartActionTypes"
 
-function mapperState(stateArray, condition, id) {
+export function mapperState(stateArray, condition, id) {
     let holder = [...stateArray]
 
     if(condition === 'remove') {
@@ -62,20 +62,4 @@ function productReducer(state = initialState.cart.products, action) {
     }
 }
 
-/*function pricingReducer(state = initialState.cart, action) {
-    switch(action.type) {
-        case GET_SUB_TOTAL:
-            let sbtotal = 0
-            state.products.map(each => sbtotal = sbtotal + each)
-            return state
-        default:
-            return state
-    }
-}*/
-
-const cartReducer = {
-    productReducer,
-    //pricingReducer
-}
-
-export default cartReducer
+export default productReducer

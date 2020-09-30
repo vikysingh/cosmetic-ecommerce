@@ -1,0 +1,47 @@
+.PAYMENT__LEFT_COL {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.PAYMENT__LEFT_COL > div:nth-child(2) {
+    margin-left: 0;
+    margin-top: 40px;
+    width: 70%;
+}
+
+.PAYMENT__LEFT_COL > div:nth-child(2) > div {
+    width: 100%;
+    height: 250px;
+}
+
+.PAYMENT__LEFT_COL > div:nth-child(2) > div > div {
+    background: rgb(85,168,255);
+    background: linear-gradient(174deg, rgba(85,168,255,1) 0%, rgba(13,0,203,1) 100%);
+}
+
+.PAYMENT__LEFT_COL > form {
+    width: 70%;
+    margin-top: 40px;
+}
+
+.PAYMENT__LEFT_COL input {
+    height: 40px;
+    margin: 5px 0;
+}
+
+.PAYMENT__LEFT_COL > form > input:first-child {
+    margin-right: 10px;
+}
+
+.PAYMENT__LEFT_COL button {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    
+    .PAYMENT__LEFT_COL > div:nth-child(2), .PAYMENT__LEFT_COL > form {
+        width: 90%;
+    }
+}

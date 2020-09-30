@@ -2,7 +2,7 @@ import React from "react"
 import { Slider, Typography } from "antd"
 
 import { connect } from "react-redux"
-import filters from "../../../redux/actions/filters/filterActionGenerators"
+import { setMinPrice, setMaxPrice } from "../../../redux/actions/filters/filterActionGenerators"
 
 import globalStyles from "../../../styles/Globals.module.css"
 
@@ -13,8 +13,8 @@ const { Title } = Typography
 function PriceFilter({dispatch}) {
       
     function onAfterChange(value) {
-        dispatch(filters.setMinPrice(value[0]))
-        dispatch(filters.setMaxPrice(value[1]))
+        dispatch(setMinPrice(value[0]))
+        dispatch(setMaxPrice(value[1]))
     }
 
     return <div className={styles.PRICE_FILTER} >

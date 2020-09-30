@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography } from "antd"
-//import PropTypes from "prop-types"
+import PropTypes from "prop-types"
 
 import styles from "../RightCol.module.css"
 
@@ -17,12 +17,12 @@ function RightColText({ name, type, price, description }) {
     )
 }
 
-/*RightColText.propTypes = {
+RightColText.propTypes = {
     name: PropTypes.string.isRequired,
     type: PropTypes.string,
-    price: PropTypes.number.isRequired,
+    price: PropTypes.string.isRequired,
     description: PropTypes.string
-}*/
+}
 
 
 export default RightColText;

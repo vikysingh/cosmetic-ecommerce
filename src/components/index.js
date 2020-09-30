@@ -1,7 +1,7 @@
 
 export { default as Hero } from "./Home/Hero/Hero"
 // export { default as ProductBar } from "./Home/ProductBar/ProductBar"
-export { default as ProductHomeMapper } from "./Home/ProductHomeMapper/ProductHomeMapper"
+// export { default as ProductHomeMapper } from "./Home/ProductHomeMapper/ProductHomeMapper"
 export { default as ProductBanner } from "./Home/ProductBanner/ProductBanner"
 export { default as DiscountBanner } from "./Home/DiscountBanner/DiscountBanner"
 
@@ -25,7 +25,11 @@ export { default as FilterDisplayer } from "./Shop/FilterDisplayer/FilterDisplay
 
 export { default as MapCartItems } from "./Cart/MapCartItems/MapCartItems"
 export { default as CartBoard} from "./Cart/CartBoard/CartBoard"
+export { default as CartCard} from "./Cart/CartCard/CartCard"
 
 export { default as Notice } from "./Notice/Notice"
 
 export { default as TextContainer} from "./ShippingReturn/TextContainer/TextContainer"
+
+export { default as AddressInfo } from "./Checkout/AddressInfo/AddressInfo"
+export { default as PaymentLeftCol } from "./Checkout/Payment/PaymentLeftCol"

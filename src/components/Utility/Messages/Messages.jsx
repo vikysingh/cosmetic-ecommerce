@@ -3,6 +3,8 @@ import React from "react"
 import globalStyles from "../../../styles/Globals.module.css"
 import styles from "./Messages.module.css"
 
+import PropTypes from "prop-types"
+
 function Messages({ type, height }) {
     return <div style={{ height }}
     className={globalStyles.flexAllCenter} id={styles.MESSAGES} >
@@ -11,6 +13,11 @@ function Messages({ type, height }) {
         { type === 'search0' && <h3 id={styles.MESSAGES__search0} > No products found </h3> }
         { type === 'emptyCart' && <h3 id={styles.MESSAGES__empty_cart} > Your cart is empty </h3> }
     </div>
+}
+
+Messages.propTypes = {
+    type: PropTypes.string.isRequired,
+    height: PropTypes.string
 }
 
 export default React.memo(Messages)

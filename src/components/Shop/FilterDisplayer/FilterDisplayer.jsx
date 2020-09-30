@@ -8,7 +8,8 @@ import globalStyles from "../../../styles/Globals.module.css"
 
 import FilterCard from "./FilterCard"
 
-import filters from "../../../redux/actions/filters/filterActionGenerators"
+import { removeProduct, removeBrand, removeMinPrice, removeMaxPrice } from "../../../redux/actions/filters/filterActionGenerators"
+import PropTypes from "prop-types"
 
 const { Title } = Typography
 
@@ -20,20 +21,27 @@ function FilterDisplayer({ product, brand, minPrice, maxPrice, dispatch }) {
                 <Title level={4}> No filters applied </Title> :
                 <>
                     { product !== '' && <FilterCard type="Product" name={product}
-                    dispatch={dispatch} action={filters.removeProduct} /> }
+                    dispatch={dispatch} action={removeProduct} /> }
 
                     { brand !== '' && <FilterCard type="Brand" name={brand}
-                    dispatch={dispatch} action={filters.removeBrand} /> }
+                    dispatch={dispatch} action={removeBrand} /> }
                     
                     { minPrice !== 0 && <FilterCard type="Min Price" name={'€'+minPrice}
-                    dispatch={dispatch} action={filters.removeMinPrice} /> }
+                    dispatch={dispatch} action={removeMinPrice} /> }
                     
                     { maxPrice !== 100 && <FilterCard type="Max price" name={'€'+maxPrice}
-                    dispatch={dispatch} action={filters.removeMaxPrice} /> }
+                    dispatch={dispatch} action={removeMaxPrice} /> }
                 </>
             }
         </div>
     )
+}
+
+FilterDisplayer.propTypes = {
+    product: PropTypes.string,
+    brand: PropTypes.string,
+    minPrice: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    maxPrice: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
 
 const mapStateToProps = state => state.filters

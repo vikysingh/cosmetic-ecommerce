@@ -10,6 +10,8 @@ import globalStyles from "../../../styles/Globals.module.css"
 
 import { ProductQuantity } from "../../index"
 
+import PropTypes from 'prop-types'
+
 const { Title } = Typography
 
 function CartCard({ imgUrl, name, price, id, dispatch, action, quantity }) {
@@ -28,6 +30,14 @@ function CartCard({ imgUrl, name, price, id, dispatch, action, quantity }) {
              />
         </div>
     </div>
+}
+
+CartCard.propTypes = {
+    imgUrl: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    id: PropTypes.number,
+    quantity: PropTypes.number
 }
 
 export default React.memo(CartCard)

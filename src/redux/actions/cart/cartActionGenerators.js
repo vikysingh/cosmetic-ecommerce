@@ -21,3 +21,7 @@ export const increaseQuantity = id => ({
     type: INCREASE_QUANTITY,
     payload: { id }
 })
+
+// module.exports = {
+//     removeFromCart
+// }

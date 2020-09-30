@@ -8,6 +8,8 @@ import { addToCart } from "../../../redux/actions/cart/cartActionGenerators"
 
 import styles from "./RightCol.module.css"
 
+import PropTypes from "prop-types"
+
 function RightCol({ name, type, price, imgUrl, description, dispatch, id, cartProducts }) {
 
     let btnRef = React.useRef(null)
@@ -42,6 +44,16 @@ function RightCol({ name, type, price, imgUrl, description, dispatch, id, cartPr
 
         </div>
     )
+}
+
+RightCol.propTypes = {
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string,
+    price: PropTypes.string.isRequired,
+    imgUrl: PropTypes.string,
+    description: PropTypes.string,
+    id: PropTypes.number.isRequired,
+    cartProducts: PropTypes.array.isRequired
 }
 
 const mapStateToProps = state => ({

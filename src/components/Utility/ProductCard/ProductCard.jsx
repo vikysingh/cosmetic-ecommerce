@@ -7,6 +7,8 @@ import globalStyles from "../../../styles/Globals.module.css"
 
 import { Typography } from "antd"
 
+import PropTypes from "prop-types"
+
 const { Title } = Typography
 
 
@@ -18,6 +20,12 @@ function ProductCard({ imgUrl, name, id }) {
             <Title level={4}> {name} </Title>
         </Link>
     )
+}
+
+ProductCard.propTypes = {
+    imgUrl: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
 }
 
 export default React.memo(ProductCard)
