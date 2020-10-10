@@ -4,11 +4,16 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "antd": "^4.6.3",
     "axios": "^0.20.0",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "enzyme-to-json": "^3.0.1",
+    "formik": "^2.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-credit-cards": "^0.8.3",
@@ -24,7 +29,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --collectCoverage --watch",
+    "test": "jest --config=jest.config.js --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,6 +49,8 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.10.4",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "jest-css-modules": "^2.1.0",
+    "jest-image-snapshot": "^4.2.0"
   }
 }

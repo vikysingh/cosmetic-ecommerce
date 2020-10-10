@@ -4,7 +4,10 @@ export const dummyCartData = {
     basePrice: '14.99' ,
     imgUrl: 'some url',
     name: 'Product name',
-    quantity: 4
+    quantity: 4,
+    type: 'type',
+    description: 'description',
+    dispatch: id => id
 }
 
 export const dummyFilterData = {
@@ -32,3 +35,16 @@ export const dummyCartProductData = [
         quantity: dummyCartData.quantity
     }
 ]
+
+export const dummyCartBoardData = {
+    subrotal: 20.00,
+    shippingPrice: 5.00,
+    total: 25.00
+}
+
+export const dummyProductDetailData = {
+    leftCol: {
+        imgList: [ dummyCartData.imgUrl, dummyCartData.imgUrl ],
+        alt: "Alt for images"
+    }
+}
