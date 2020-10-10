@@ -1,63 +1,79 @@
 import React from "react"
 
 import { Typography, Input, Tooltip } from "antd"
+
 import styles from "./Form.module.css"
-import { ThemeButton } from "../../index"
+// import { ThemeButton } from "../../index"
+
+import { useFormik } from 'formik';
 
 const { Title } = Typography
 const { TextArea } = Input
 
 export default function ContactForm() {
-    return <form action="post" className={styles.CONTACT_FORM}>
+
+    const formik = useFormik({
+        initialValues: {
+          name: '',
+          email: '',
+          phone: null,
+          message: ''
+        },
+        onSubmit: values => {
+          alert("Your message was successfuly sent and \nwe'll contact you as soon as possible");
+        },
+      });
+
+    return <form action="post" className={styles.CONTACT_FORM}  onSubmit={formik.handleSubmit}>
         <Title level={4}> Get in touch </Title>
-        
         <Tooltip
-            trigger={['focus']}
-            title="Name"
-            placement="topLeft"
-            overlayClassName="text-input"
-        >
-            <Input
-            type="text"
-            placeholder="Name"
-            />
-      </Tooltip>
+                trigger={['focus']}
+                title="Name"
+                placement="topLeft"
+                overlayClassName="text-input" >
+
+                    <Input type="text" placeholder="Name" name="name"
+                     onChange={formik.handleChange}
+                    value={formik.values.name} required={true} />
+        </Tooltip>
 
         <Tooltip
             trigger={['focus']}
             title="Email"
             placement="topLeft"
-            overlayClassName="email-input"
-        >
-            <Input
-            type="text"
-            placeholder="Email"
-            />
+            overlayClassName="email-input">
+            
+                <Input type="text" placeholder="Email" name="email" 
+                onChange={formik.handleChange} required={true}
+                value={formik.values.email} />
+
       </Tooltip>
 
-        <Tooltip
+      <Tooltip
             trigger={['focus']}
             title="Phone number"
             placement="topLeft"
-            overlayClassName="tel-input"
-        >
-            <Input
-            type="text"
-            placeholder="Phone number"
-            />
+            overlayClassName="tel-input" >
+            
+                <Input type="text" placeholder="Phone number" name="phone"
+                onChange={formik.handleChange} required={true}
+                value={formik.values.phone}  />
+
       </Tooltip>
+
       <Tooltip
         trigger={['focus']}
         title="Message"
         placement="topLeft"
-        overlayClassName="text-input"
-      >
-        <TextArea
-            placeholder="Your message"
-            autoSize={{ minRows: 6, maxRows: 15 }}
-            />
+        overlayClassName="text-input" >
+            
+                <TextArea placeholder="Your message" autoSize={{ minRows: 6, maxRows: 15 }}
+                onChange={formik.handleChange} value={formik.values.message} required={true}
+                name="message"  />
+
       </Tooltip>
-      <ThemeButton theme="shop" type="submit"> Send </ThemeButton>
+
+      <button type="submit" > Submit </button>
       
     </form>
 }

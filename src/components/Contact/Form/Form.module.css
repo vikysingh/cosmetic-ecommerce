@@ -37,6 +37,11 @@
     height: 45px;
     width: 20%;
     font-weight: bolder;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    width: 100%;
 }
 
 @media (max-width: 1024px) and (min-height: 1000px) {
