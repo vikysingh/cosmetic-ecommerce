@@ -1,7 +1,0 @@
-{
-    "home": "/",
-    "shop": "/shop",
-    "productDetail": "/product/:productId",
-    "cart": "/cart",
-    "about": "/about"
-}
