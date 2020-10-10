@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Form from Contact/Form 1`] = `
+<form
+  action="post"
+  className="CONTACT_FORM"
+>
+  <Title
+    level={4}
+  >
+     Get in touch 
+  </Title>
+  <[object Object]
+    arrowPointAtCenter={false}
+    autoAdjustOverflow={true}
+    mouseEnterDelay={0.1}
+    mouseLeaveDelay={0.1}
+    overlayClassName="text-input"
+    placement="topLeft"
+    title="Name"
+    transitionName="zoom-big-fast"
+    trigger={
+      Array [
+        "focus",
+      ]
+    }
+  >
+    <Input
+      placeholder="Name"
+      type="text"
+    />
+  </[object Object]>
+  <[object Object]
+    arrowPointAtCenter={false}
+    autoAdjustOverflow={true}
+    mouseEnterDelay={0.1}
+    mouseLeaveDelay={0.1}
+    overlayClassName="email-input"
+    placement="topLeft"
+    title="Email"
+    transitionName="zoom-big-fast"
+    trigger={
+      Array [
+        "focus",
+      ]
+    }
+  >
+    <Input
+      placeholder="Email"
+      type="text"
+    />
+  </[object Object]>
+  <[object Object]
+    arrowPointAtCenter={false}
+    autoAdjustOverflow={true}
+    mouseEnterDelay={0.1}
+    mouseLeaveDelay={0.1}
+    overlayClassName="tel-input"
+    placement="topLeft"
+    title="Phone number"
+    transitionName="zoom-big-fast"
+    trigger={
+      Array [
+        "focus",
+      ]
+    }
+  >
+    <Input
+      placeholder="Phone number"
+      type="text"
+    />
+  </[object Object]>
+  <[object Object]
+    arrowPointAtCenter={false}
+    autoAdjustOverflow={true}
+    mouseEnterDelay={0.1}
+    mouseLeaveDelay={0.1}
+    overlayClassName="text-input"
+    placement="topLeft"
+    title="Message"
+    transitionName="zoom-big-fast"
+    trigger={
+      Array [
+        "focus",
+      ]
+    }
+  >
+    <TextArea
+      autoSize={
+        Object {
+          "maxRows": 15,
+          "minRows": 6,
+        }
+      }
+      placeholder="Your message"
+    />
+  </[object Object]>
+  <[object Object]
+    theme="shop"
+    type="submit"
+  >
+     Send 
+  </[object Object]>
+</form>
+`;

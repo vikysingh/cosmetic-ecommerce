@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Hero from home 1`] = `
+<div
+  id="HOME__hero"
+>
+  <h1>
+     Cosmetic Commerce 
+  </h1>
+  <[object Object]
+    theme="shop_reverse"
+  >
+     
+    <[object Object]
+      to="/shop"
+    >
+       SHOP NOW 
+    </[object Object]>
+     
+  </[object Object]>
+</div>
+`;

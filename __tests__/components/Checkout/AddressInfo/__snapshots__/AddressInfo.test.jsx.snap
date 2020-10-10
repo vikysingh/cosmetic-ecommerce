@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render AddressInfo from Checkout 1`] = `
+<div
+  className="CHECKOUT__LEFT_COL"
+>
+  <Breadcrumb
+    className="CHECKOUT__LEFT_COL__breadcrumb"
+  >
+    <BreadcrumbItem>
+      <[object Object]
+        to="/"
+      >
+         Home 
+      </[object Object]>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      <[object Object]
+        to="/cart"
+      >
+         Cart 
+      </[object Object]>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      Address
+    </BreadcrumbItem>
+  </Breadcrumb>
+  <Title
+    level={3}
+  >
+     Contact information 
+  </Title>
+  <Input
+    placeholder="Email"
+    type="email"
+  />
+  <form>
+    <Title
+      level={4}
+    >
+       Shipping address 
+    </Title>
+    <Input
+      placeholder="First Name"
+      type="text"
+    />
+    <Input
+      placeholder="Last Name"
+      type="text"
+    />
+    <Input
+      placeholder="Address"
+      type="text"
+    />
+    <Input
+      placeholder="Apartment, suite etc.(optional)"
+      type="text"
+    />
+    <Input
+      placeholder="City"
+      type="text"
+    />
+    <Select
+      bordered={true}
+      choiceTransitionName=""
+      className="CHECKOUT__LEFT_COL__select"
+      filterOption={[Function]}
+      optionFilterProp="children"
+      placeholder="Country"
+      showSearch={true}
+      transitionName="slide-up"
+    >
+      <Option
+        key="Italy"
+        value="Italy"
+      >
+         
+        Italy
+         
+      </Option>
+      <Option
+        key="France"
+        value="France"
+      >
+         
+        France
+         
+      </Option>
+      <Option
+        key="Germany"
+        value="Germany"
+      >
+         
+        Germany
+         
+      </Option>
+      <Option
+        key="United Kingdom"
+        value="United Kingdom"
+      >
+         
+        United Kingdom
+         
+      </Option>
+      <Option
+        key="Spain"
+        value="Spain"
+      >
+         
+        Spain
+         
+      </Option>
+      <Option
+        key="Portugal"
+        value="Portugal"
+      >
+         
+        Portugal
+         
+      </Option>
+      <Option
+        key="Canada"
+        value="Canada"
+      >
+         
+        Canada
+         
+      </Option>
+      <Option
+        key="United States"
+        value="United States"
+      >
+         
+        United States
+         
+      </Option>
+    </Select>
+    <Input
+      name="zip"
+      pattern="[0-9]*"
+      type="text"
+    />
+    <[object Object]
+      theme="shop"
+    >
+      <[object Object]
+        to="/checkout/payment"
+      >
+        Go to payment
+      </[object Object]>
+    </[object Object]>
+  </form>
+</div>
+`;

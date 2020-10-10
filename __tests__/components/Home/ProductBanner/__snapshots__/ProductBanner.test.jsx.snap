@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render ProductBanner from Home 1`] = `
+<div
+  className="flexRowAroundCenter"
+  id="PRODUCT_BANNER"
+>
+  <[object Object]
+    imgSrc={null}
+    productType="Eyeliner"
+    text="EYES"
+  />
+  <[object Object]
+    imgSrc={null}
+    productType="Lipstick"
+    text="LIPS"
+  />
+  <[object Object]
+    imgSrc={null}
+    productType="Foundation"
+    text="FACE"
+  />
+</div>
+`;

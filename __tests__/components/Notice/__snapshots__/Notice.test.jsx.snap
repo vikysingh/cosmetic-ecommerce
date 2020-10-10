@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Notice from Notice 1`] = `
+<div
+  className="NOTICE"
+>
+  <[object Object]
+    className="NOTICE__icon"
+  />
+  Site is still in development!
+</div>
+`;

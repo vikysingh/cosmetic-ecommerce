@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render TextContainer from ShippingReturn/TextContainer 1`] = `
+<div
+  className="TEXT_CONTAINER"
+>
+  <Title
+    level={4}
+  >
+     
+    Title
+     
+  </Title>
+  <Paragraph>
+     hello 
+  </Paragraph>
+</div>
+`;

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render MapCartItems from Cart 1`] = `
+<div
+  id="LEFT_COL"
+>
+  <div
+    className="flexAllCenter"
+    id="LEFT_COL__upper"
+  >
+    <img
+      alt="Alt for images"
+      src="some url"
+    />
+  </div>
+  <div
+    className="flexRowAroundCenter"
+    id="LEFT_COL__lower"
+  >
+    <img
+      alt="Alt for images"
+      onClick={[Function]}
+      src="some url"
+    />
+    <img
+      alt="Alt for images"
+      onClick={[Function]}
+      src="some url"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render CartCard from 
+Cart 1`] = `
+<div
+  className="flexRowStartCenter"
+  id="CART_CARD"
+>
+  <img
+    alt=""
+    src="some url"
+  />
+  <div>
+    <Title
+      level={4}
+    >
+      <[object Object]
+        to="product/49"
+      >
+         
+        Product name
+         
+      </[object Object]>
+    </Title>
+    <[object Object]
+      id={49}
+      quantity={4}
+    />
+    <h5>
+       Total: €
+      14.99
+       
+    </h5>
+    <[object Object]
+      className="CART_CARD__delete_icon"
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;

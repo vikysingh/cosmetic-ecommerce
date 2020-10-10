@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Payment from Checkout 1`] = `
+<div
+  className="PAYMENT__LEFT_COL"
+>
+  <Breadcrumb>
+    <BreadcrumbItem>
+      <[object Object]
+        to="/"
+      >
+         Home 
+      </[object Object]>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      <[object Object]
+        to="/cart"
+      >
+         Cart 
+      </[object Object]>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      <[object Object]
+        to="/checkout/address"
+      >
+         Address 
+      </[object Object]>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      Payment
+    </BreadcrumbItem>
+  </Breadcrumb>
+  <ReactCreditCards
+    acceptedCards={
+      Array [
+        "visa",
+        "mastercard",
+      ]
+    }
+    cvc=""
+    expiry=""
+    focused=""
+    locale={
+      Object {
+        "valid": "valid thru",
+      }
+    }
+    name=""
+    number=""
+    placeholders={
+      Object {
+        "name": "YOUR NAME HERE",
+      }
+    }
+    preview={true}
+  />
+  <form>
+    <Input
+      maxLength={16}
+      name="number"
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Card number"
+      type="number"
+    />
+    <Input
+      name="name"
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Name"
+      type="text"
+    />
+    <Input
+      maxLength={5}
+      name="expiry"
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Valid thru"
+      type="number"
+    />
+    <Input
+      maxLength={4}
+      name="cvc"
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="CVC"
+      type="number"
+    />
+    <[object Object]
+      theme="shop"
+    >
+       Complete payment 
+    </[object Object]>
+  </form>
+</div>
+`;
