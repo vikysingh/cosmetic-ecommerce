@@ -7,15 +7,26 @@ import 'react-credit-cards/es/styles-compiled.css';
 import { ThemeButton } from "../../index"
 import styles from "./PaymentLeftCol.module.css"
 
+import { useFormik } from "formik"
+
 const { Item } = Breadcrumb
 
 export default function PaymentLeftCol() {
 
-    const [ stateCVC, setCVC ] = React.useState('')
-    const [ stateExpiry, setExpiry ] = React.useState('')
     const [ stateFocus, setFocus ] = React.useState('')
-    const [ stateName, setName ] = React.useState('')
-    const [ stateNumber, setNumber ] = React.useState('')
+
+    const formik = useFormik({
+        initialValues: {
+            cvc: '',
+            expiry: '',
+            focus: '',
+            name: '',
+            number: '',
+        },
+        onSubmit: values => {
+            console.log(values)
+        },
+    })
 
     return <div className={styles.PAYMENT__LEFT_COL} >
         <Breadcrumb >
@@ -33,36 +44,38 @@ export default function PaymentLeftCol() {
             </Item>
         </Breadcrumb>
         <Cards
-          cvc={stateCVC}
-          expiry={stateExpiry}
+          cvc={formik.values.cvc}
+          expiry={formik.values.expiry}
           focused={stateFocus}
-          name={stateName}
-          number={stateNumber}
+          name={formik.values.name}
+          number={formik.values.number}
           preview={true}
           acceptedCards={['visa', 'mastercard']}
         />
 
         <form>
             <Input type="number" placeholder="Card number" name="number"
-            maxLength={16}
+            maxLength={16} value={formik.values.number} required={true}
             onFocus={e => setFocus(e.target.name) }
-            onChange={e => setNumber(e.target.value)} />
+            onChange={formik.handleChange} />
 
             <Input type="text" placeholder="Name" name="name"
+            value={formik.values.name} required={true}
             onFocus={e => setFocus(e.target.name)}
-            onChange={e => setName(e.target.value)} />
+            onChange={formik.handleChange} />
 
             <Input type="number" placeholder="Valid thru" name="expiry"
-            maxLength={5}
+            maxLength={5} value={formik.values.expiry} required={true}
             onFocus={e => setFocus(e.target.name)}
-            onChange={e => setExpiry(e.target.value)} />
+            onChange={formik.handleChange} />
 
             <Input type="number" placeholder="CVC" name="cvc"
-            maxLength={4}
+            maxLength={4} value={formik.values.cvc} required={true}
             onFocus={e => setFocus(e.target.name)}
-            onChange={e => setCVC(e.target.value)} />
+            onChange={formik.handleChange} />
 
-            <ThemeButton theme="shop"> Complete payment </ThemeButton>
+            {/* <ThemeButton theme="shop"> Complete payment </ThemeButton> */}
+            <button type="submit"> Complete payment </button>
         </form>
     </div>
 }

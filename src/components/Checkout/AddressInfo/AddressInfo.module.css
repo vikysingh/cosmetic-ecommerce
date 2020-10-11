@@ -6,11 +6,8 @@
 
 .CHECKOUT__LEFT_COL h3, .CHECKOUT__LEFT_COL h4 {
     font-weight: lighter;
-}
-
-.CHECKOUT__LEFT_COL h3 {
     margin-top: 20px;
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 
 .CHECKOUT__LEFT_COL input {
@@ -25,18 +22,18 @@
     width: 80%;
 }
 
-.CHECKOUT__LEFT_COL > input {
-    width: 80%;
+.CHECKOUT__LEFT_COL > form > input:nth-child(2) {
+    width: 100%;
 }
 
-.CHECKOUT__LEFT_COL form > input:nth-child(2),
-.CHECKOUT__LEFT_COL form > input:nth-child(3),
-.CHECKOUT__LEFT_COL form > input:nth-child(8),
+.CHECKOUT__LEFT_COL form > input:nth-child(4),
+.CHECKOUT__LEFT_COL form > input:nth-child(5),
+.CHECKOUT__LEFT_COL form > input:nth-child(10),
 .CHECKOUT__LEFT_COL__select {
     width: calc(50% - 5px) !important;
 }
 
-.CHECKOUT__LEFT_COL form > input:nth-child(2), .CHECKOUT__LEFT_COL__select {
+.CHECKOUT__LEFT_COL form > input:nth-child(4), .CHECKOUT__LEFT_COL__select {
     margin-right: 10px;
 }
 
