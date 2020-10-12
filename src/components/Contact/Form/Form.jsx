@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Typography, Input, Tooltip } from "antd"
+import { Typography, Input, Tooltip, Modal } from "antd"
 
 import styles from "./Form.module.css"
 // import { ThemeButton } from "../../index"
@@ -19,10 +19,18 @@ export default function ContactForm() {
           phone: null,
           message: ''
         },
-        onSubmit: values => {
-          alert("Your message was successfuly sent and \nwe'll contact you as soon as possible");
+        onSubmit: () => {
+          showModal()
         },
       });
+
+    function showModal() {
+        Modal.success({
+            content: <strong>Your message was successfuly sent 
+                      and we'll contact you as soon as possible
+                    </strong>
+        })
+    }
 
     return <form action="post" className={styles.CONTACT_FORM}  onSubmit={formik.handleSubmit}>
         <Title level={4}> Get in touch </Title>
