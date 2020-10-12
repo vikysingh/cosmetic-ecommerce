@@ -1,11 +1,13 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { Breadcrumb, Input } from "antd"
+import { Breadcrumb, Input, Modal } from "antd"
 import routes from "../../../constants/routes.json"
 import Cards from 'react-credit-cards';
 import 'react-credit-cards/es/styles-compiled.css';
-import { ThemeButton } from "../../index"
+// import { ThemeButton } from "../../index"
 import styles from "./PaymentLeftCol.module.css"
+
+import checkouts from "../../../constants/checkouts.json"
 
 import { useFormik } from "formik"
 
@@ -25,8 +27,16 @@ export default function PaymentLeftCol() {
         },
         onSubmit: values => {
             console.log(values)
+            // e.preventDefault()
+            showModal()
         },
     })
+
+    function showModal() {
+        Modal.success({
+            content: <strong>{checkouts.notices.paymentSuccess}</strong>
+        })
+    }
 
     return <div className={styles.PAYMENT__LEFT_COL} >
         <Breadcrumb >
@@ -53,7 +63,7 @@ export default function PaymentLeftCol() {
           acceptedCards={['visa', 'mastercard']}
         />
 
-        <form>
+        <form action="post" onSubmit={formik.handleSubmit} >
             <Input type="number" placeholder="Card number" name="number"
             maxLength={16} value={formik.values.number} required={true}
             onFocus={e => setFocus(e.target.name) }
@@ -75,7 +85,7 @@ export default function PaymentLeftCol() {
             onChange={formik.handleChange} />
 
             {/* <ThemeButton theme="shop"> Complete payment </ThemeButton> */}
-            <button type="submit"> Complete payment </button>
+            <button type="submit" > Complete payment </button>
         </form>
     </div>
 }
