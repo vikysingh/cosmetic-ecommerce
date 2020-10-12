@@ -8,5 +8,8 @@
         "Portugal",
         "Canada",
         "United States"
-    ]
+    ],
+    "notices": {
+        "paymentSuccess": "Your payment was successful and we've started shipping of your products"
+    }
 }
