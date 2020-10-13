@@ -12,9 +12,15 @@ import { Link } from "react-router-dom"
 
 import routes from "../../../constants/routes.json"
 
+import { useHistory } from "react-router-dom"
+
+import auth from "../../../utils/auth"
+
 const { Title } = Typography
 
 function CartBoard({ subtotal, shippingPrice, total }) {
+
+    let history = useHistory()
 
     return <div className={styles.CART_BOARD} >
         <Title level={3}> Order Summary </Title>
@@ -32,7 +38,15 @@ function CartBoard({ subtotal, shippingPrice, total }) {
             <Title level={4}> Total </Title>
             <strong> €{total} </strong> 
         </div>
-        <ThemeButton theme="shop" > <Link to={routes.checkoutAddress} >Go to checkout</Link> </ThemeButton>
+        <button onClick={() => {
+            auth.allowCheckout(() => {
+                history.push(routes.checkoutAddress)
+            })
+        }} > 
+            {/* <Link to={routes.checkoutAddress} > */}
+                Go to checkout
+            {/* </Link> */}
+        </button>
     </div>
 }
 

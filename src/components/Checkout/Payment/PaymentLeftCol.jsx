@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Breadcrumb, Input, Modal } from "antd"
+import { Link, useHistory } from "react-router-dom"
+import { Breadcrumb, Input, Modal, Button } from "antd"
 import routes from "../../../constants/routes.json"
 import Cards from 'react-credit-cards';
 import 'react-credit-cards/es/styles-compiled.css';
@@ -11,11 +11,16 @@ import checkouts from "../../../constants/checkouts.json"
 
 import { useFormik } from "formik"
 
+
+
 const { Item } = Breadcrumb
 
 export default function PaymentLeftCol() {
 
+    let history = useHistory()
+
     const [ stateFocus, setFocus ] = React.useState('')
+    const [ modalVisible, setModalVisible ] = React.useState(false)
 
     const formik = useFormik({
         initialValues: {
@@ -26,16 +31,13 @@ export default function PaymentLeftCol() {
             number: '',
         },
         onSubmit: values => {
-            console.log(values)
-            // e.preventDefault()
-            showModal()
+            setModalVisible(true)
         },
     })
 
-    function showModal() {
-        Modal.success({
-            content: <strong>{checkouts.notices.paymentSuccess}</strong>
-        })
+    function handleModalClose() {
+        setModalVisible(false)
+        history.push(routes.cart)
     }
 
     return <div className={styles.PAYMENT__LEFT_COL} >
@@ -53,6 +55,19 @@ export default function PaymentLeftCol() {
                 Payment
             </Item>
         </Breadcrumb>
+
+        <Modal
+        title={checkouts.notices.paymentSuccessTitle}
+        visible={modalVisible}
+        footer={[
+            <Button key="submit" type="primary" onClick={handleModalClose}>
+              Ok
+            </Button>
+        ]}
+        >
+            <strong> { checkouts.notices.paymentSuccessMessage } </strong>
+        </Modal>
+
         <Cards
           cvc={formik.values.cvc}
           expiry={formik.values.expiry}

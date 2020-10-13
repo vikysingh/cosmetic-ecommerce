@@ -1,6 +1,6 @@
 .shop {
-    background-color: #000;
-    color: #fff;
+    background-color: #000 !important;
+    color: #fff !important;
 }
 
 .shop a {
@@ -8,8 +8,8 @@
 }
 
 .shop:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #fff !important;
+    color: #000 !important;
 }
 
 .shop:hover a {
@@ -27,10 +27,10 @@
 }
 
 .shop_reverse:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: #000 !important;
+    /* color: #fff; */
 }
 
-.shop_reverse:hover a {
-    color: #fff;
-}
+/* .shop_reverse:hover a:hover {
+    color: #000;
+} */

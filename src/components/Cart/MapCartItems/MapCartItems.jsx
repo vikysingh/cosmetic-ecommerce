@@ -9,13 +9,13 @@ import { removeFromCart } from "../../../redux/actions/cart/cartActionGenerators
 
 import PropTypes from "prop-types"
 
-function Mapcartitems({ productList, dispatch }) {
+function Mapcartitems({ productList, dispatch, onRead }) {
     
     return (
         <div id={styles.MAP_CART_ITEMS} className={globalStyles.flexColumnCenterCenter}>
             {
                 productList === undefined && productList.length === 0 ? <h4>Loading</h4> :
-                productList.map(cartItem => <CartCard imgUrl={cartItem.imgUrl} key={cartItem.id}
+                productList.map(cartItem => <CartCard onRead={onRead} imgUrl={cartItem.imgUrl} key={cartItem.id}
                 name={cartItem.name} id={cartItem.id} quantity={cartItem.quantity}
                 price={cartItem.price} dispatch={dispatch} action={{ removeFromCart }}
                  />)
@@ -25,7 +25,8 @@ function Mapcartitems({ productList, dispatch }) {
 }
 
 Mapcartitems.propTypes = {
-    productsList: PropTypes.array
+    productsList: PropTypes.array,
+    onRead: PropTypes.bool
 }
 
 export default React.memo(Mapcartitems)

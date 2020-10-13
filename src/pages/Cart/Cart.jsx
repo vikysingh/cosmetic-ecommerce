@@ -39,7 +39,7 @@ function Cart({ cartProducts, dispatch }) {
             </Col>: 
             <>
             <Col lg={14} md={14} xs={24}>
-                <MapCartItems productList={cartProducts} dispatch={dispatch}/> 
+                <MapCartItems onRead={false} productList={cartProducts} dispatch={dispatch}/> 
             </Col>
             <Col lg={10} md={10} xs={24}>
                 <CartBoard subtotal={parseFloat(subTotalPrice)} 

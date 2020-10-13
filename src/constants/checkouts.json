@@ -10,6 +10,7 @@
         "United States"
     ],
     "notices": {
-        "paymentSuccess": "Your payment was successful and we've started shipping of your products"
+        "paymentSuccessTitle": "Payment notice",
+        "paymentSuccessMessage": "Your payment was successful and we've started shipping of your products"
     }
 }

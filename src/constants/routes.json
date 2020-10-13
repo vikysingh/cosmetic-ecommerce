@@ -7,5 +7,6 @@
     "contact": "/contact",
     "shippingReturn": "/shippings",
     "checkoutAddress": "/checkout/address",
-    "checkoutPayment": "/checkout/payment"
+    "checkoutPayment": "/checkout/payment",
+    "dashboard": "/dashboard"
 }

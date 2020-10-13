@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from "react-router-dom"
 
 import styles from "./Hero.module.css"
-import { ThemeButton } from "../../index"
+import ThemeButton from "../../Utility/Button/Button"
 
 import routes from "../../../constants/routes.json"
 
