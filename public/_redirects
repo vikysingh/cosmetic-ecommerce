@@ -1,11 +1,1 @@
-# Redirects from what the browser requests to what we serve
-/home			/
-/shop	 		/shop
-/productDetail	 	/product/:productId
-/cart			/cart
-/about		 	/about
-/contact		/contact
-/shippingReturn		/shippings
-/checkoutAddress	/checkout/address
-/checkoutPayment	/checkout/payment
-/dashboard 		/dashboard
+/*  /index.html 200
