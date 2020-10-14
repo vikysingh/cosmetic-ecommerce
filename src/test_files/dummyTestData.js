@@ -14,7 +14,11 @@ export const dummyFilterData = {
     brand: 'maybelline',
     product: 'eye liner',
     minPrice: 20.00 ,
-    maxPrice: 50.00
+    maxPrice: 50.00,
+    dispatch: id => id,
+    action: vals => vals,
+    type: 'brand',
+    name: 'Maybelline'
 }
 
 export const dummyCartProductData = [
