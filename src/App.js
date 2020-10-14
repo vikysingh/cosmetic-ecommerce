@@ -7,7 +7,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 import routes from "./constants/routes.json"
 
-import { Home, ProductDetail, Contact, Shop, Cart, ShippingReturn, Checkout, Dashboard } from "./pages"
+import { Home, ProductDetail, Contact, Shop, Cart, ShippingReturn, Checkout, Dashboard, NotFound } from "./pages"
 
 import { Navbar, Footer, Notice, AddressInfo, PaymentLeftCol } from "./components"
 import "./styles/App.css"
@@ -78,6 +78,13 @@ export default function App() {
                         <Notice />
                         <Navbar />
                         <Dashboard />
+                        <Footer />
+                    </Route>
+
+                    <Route>
+                        <Notice />
+                        <Navbar />
+                        <NotFound />
                         <Footer />
                     </Route>
 
