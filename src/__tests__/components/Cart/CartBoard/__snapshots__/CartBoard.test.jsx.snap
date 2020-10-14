@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render CartBoard from Cart 1`] = `
+<div
+  className="CART_BOARD"
+>
+  <Title
+    level={3}
+  >
+     Order Summary 
+  </Title>
+  <hr />
+  <div
+    className="flexRowBetweenCenter"
+  >
+    <Title
+      level={4}
+    >
+       Subtotal 
+    </Title>
+    <strong>
+       €
+      20
+       
+    </strong>
+  </div>
+  <div
+    className="flexRowBetweenCenter"
+  >
+    <Title
+      level={4}
+    >
+       Shipping 
+    </Title>
+    <strong>
+       €
+      5
+       
+    </strong>
+  </div>
+  <hr />
+  <div
+    className="flexRowBetweenCenter"
+  >
+    <Title
+      level={4}
+    >
+       Total 
+    </Title>
+    <strong>
+       €
+       
+    </strong>
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Go to checkout
+  </button>
+</div>
+`;

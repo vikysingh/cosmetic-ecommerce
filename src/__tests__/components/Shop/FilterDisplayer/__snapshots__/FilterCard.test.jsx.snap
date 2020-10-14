@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render FilterCard from Shop/FilterDisplayer 1`] = `
+<div
+  className="FILTER_DISPLAYER__filter_card"
+>
+  <label>
+    brand
+    : 
+  </label>
+  <strong>
+     
+    Maybelline
+     
+  </strong>
+  <[object Object]
+    id="FILTER_DISPLAYER__close_icon"
+    onClick={[Function]}
+  />
+</div>
+`;

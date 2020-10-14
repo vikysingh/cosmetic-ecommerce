@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Filter from Shop 1`] = `
+<div
+  className="FILTER"
+>
+  <Title
+    level={3}
+  >
+     
+    Products
+     
+  </Title>
+  <div
+    className="flexRowAroundCenter"
+  >
+    <label
+      key="Blush"
+      onClick={[Function]}
+    >
+      Blush
+       
+    </label>
+    <label
+      key="Bronzer"
+      onClick={[Function]}
+    >
+      Bronzer
+       
+    </label>
+    <label
+      key="Eyebrow"
+      onClick={[Function]}
+    >
+      Eyebrow
+       
+    </label>
+    <label
+      key="Eyeliner"
+      onClick={[Function]}
+    >
+      Eyeliner
+       
+    </label>
+    <label
+      key="Eyeshadow"
+      onClick={[Function]}
+    >
+      Eyeshadow
+       
+    </label>
+    <label
+      key="Foundation"
+      onClick={[Function]}
+    >
+      Foundation
+       
+    </label>
+    <label
+      key="Lip Liner"
+      onClick={[Function]}
+    >
+      Lip Liner
+       
+    </label>
+    <label
+      key="Lipstick"
+      onClick={[Function]}
+    >
+      Lipstick
+       
+    </label>
+    <label
+      key="Mascara"
+      onClick={[Function]}
+    >
+      Mascara
+       
+    </label>
+    <label
+      key="Nail polish"
+      onClick={[Function]}
+    >
+      Nail polish
+       
+    </label>
+  </div>
+</div>
+`;

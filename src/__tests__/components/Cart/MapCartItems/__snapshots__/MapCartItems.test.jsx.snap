@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render MapCartItems from Cart 1`] = `
+<div
+  className="flexColumnCenterCenter"
+  id="MAP_CART_ITEMS"
+>
+  <[object Object]
+    action={
+      Object {
+        "removeFromCart": [Function],
+      }
+    }
+    dispatch={[Function]}
+    id={49}
+    imgUrl="some url"
+    key="49"
+    name="Product name"
+    price="14.99"
+    quantity={4}
+  />
+  <[object Object]
+    action={
+      Object {
+        "removeFromCart": [Function],
+      }
+    }
+    dispatch={[Function]}
+    id={23}
+    imgUrl="some url"
+    key="23"
+    name="Product name"
+    price="14.99"
+    quantity={4}
+  />
+</div>
+`;

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render DiscountBanner from home 1`] = `
+<[object Object]
+  id="ABOUT"
+>
+  <[object Object]
+    id="ABOUT__left_col"
+    lg={10}
+    md={10}
+    xs={24}
+  >
+    <Title
+      level={1}
+    >
+      -25%
+    </Title>
+    <Title
+      level={4}
+    >
+      A short but descriptive paragraph about this online shop/store.
+    </Title>
+  </[object Object]>
+  <[object Object]
+    className="flexAllCenter"
+    id="ABOUT__right_col"
+    lg={12}
+    md={12}
+    xs={24}
+  >
+    <img
+      alt=""
+      src={null}
+    />
+  </[object Object]>
+</[object Object]>
+`;

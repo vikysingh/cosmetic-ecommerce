@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Filterbar from Shop 1`] = `
+<div
+  className="FILTER_BAR"
+>
+  <div
+    className="flexRowEndCenter"
+    id="FILTER_BAR__head"
+  >
+    <label>
+       Refine search 
+    </label>
+    <[object Object]
+      id="FILTER_BAR__open_icon"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="FILTER_BAR__body"
+  >
+    <[object Object]
+      id="FILTER_BAR__close_icon"
+      onClick={[Function]}
+    />
+    <[object Object]
+      filterList={
+        Array [
+          "Blush",
+          "Bronzer",
+          "Eyebrow",
+          "Eyeliner",
+          "Eyeshadow",
+          "Foundation",
+          "Lip Liner",
+          "Lipstick",
+          "Mascara",
+          "Nail polish",
+        ]
+      }
+      title="Products"
+      type="products"
+    />
+    <[object Object]
+      filterList={
+        Array [
+          "Benefit",
+          "Covergirl",
+          "Dalish",
+          "Essie",
+          "Fenty",
+          "Glossier",
+          "Iman",
+          "L'oreal",
+          "Maybelline",
+          "Orly",
+        ]
+      }
+      title="Brands"
+      type="brand"
+    />
+    <[object Object] />
+  </div>
+</div>
+`;
