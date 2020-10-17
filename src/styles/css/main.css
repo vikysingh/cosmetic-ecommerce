@@ -1,0 +1,144 @@
+.mainHeading {
+  font-size: 6rem;
+  font-weight: bolder;
+  color: #272932;
+  text-transform: uppercase; }
+
+.titleHeading {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #272932;
+  text-transform: uppercase; }
+
+.lastHeading {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #272932;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1rem;
+  font-weight: lighter;
+  color: #272932;
+  text-transform: uppercase;
+  text-transform: unset; }
+
+.primaryColor {
+  color: #272932; }
+
+.warningColor {
+  color: #A53860; }
+
+.successColor {
+  color: #0F7173; }
+
+.flexCenterCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: unset; }
+
+.flexRowAroundCenter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row; }
+
+.flexRowBetweenCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row; }
+
+.flexColAroundCenter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column; }
+
+.setSection {
+  width: 100vw;
+  height: auto; }
+
+@media (max-width: 600px) {
+  .mainHeading {
+    font-size: 4rem; }
+  .promotionBanners {
+    width: 90%;
+    margin: 20px 0; }
+  .productCard {
+    width: 43vw;
+    margin: 7px; }
+  .productCard img {
+    width: 60%; } }
+
+.primaryActionButton {
+  border: 2px solid #272932;
+  height: auto;
+  width: auto;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #272932;
+  cursor: pointer;
+  transition: 300ms all ease; }
+
+.primaryActionButton:hover {
+  background-color: #272932;
+  color: #ffffff; }
+
+.promotionBanners {
+  width: 25%;
+  height: 460px;
+  min-width: 300px;
+  background-color: #eee;
+  padding-left: 30px;
+  padding-bottom: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
+  overflow: hidden; }
+
+.promotionBanners img {
+  width: 115%;
+  height: 205px;
+  margin-left: -30px; }
+
+.promotionBanners h2 {
+  width: 40%;
+  margin-top: 10px; }
+
+.productCard {
+  background-color: #ffffff;
+  width: 160px;
+  height: 240px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 300ms all ease;
+  text-align: center;
+  padding-bottom: 10px;
+  flex-direction: column; }
+
+.productCard:hover {
+  transform: scale(1.1); }
+
+.productCard img {
+  width: 70%;
+  height: auto; }
+
+.productCard h3 {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  width: 90%; }
+
+.filterButton {
+  width: auto;
+  height: auto;
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: lighter; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden; }

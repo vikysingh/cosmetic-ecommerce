@@ -1,0 +1,11 @@
+@import './_variables.scss';
+@import './_typography.scss';
+@import './_layouts.scss';
+@import './_media-queries.scss';
+@import './_elements.scss';
+
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden;
+}

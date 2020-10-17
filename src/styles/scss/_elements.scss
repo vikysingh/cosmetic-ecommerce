@@ -1,0 +1,75 @@
+.primaryActionButton {
+    border: 2px solid $primaryColor;
+    height: auto;
+    width: auto;
+    padding: 10px 20px;
+    background-color: $whiteColor;
+    color: $primaryColor;
+    cursor: pointer;
+    transition: 300ms all ease;
+}
+
+.primaryActionButton:hover {
+    background-color: $primaryColor;
+    color: $whiteColor;
+}
+
+.promotionBanners {
+    width: 25%;
+    height: 460px;
+    min-width: 300px;
+    background-color: #eee;
+    padding-left: 30px;
+    padding-bottom: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.promotionBanners img {
+    width: 115%;
+    height: 205px;
+    margin-left: -30px;
+}
+
+.promotionBanners h2 {
+    width: 40%;
+    margin-top: 10px;
+}
+
+.productCard {
+    background-color: $whiteColor;
+    width: 160px;
+    height: 240px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 300ms all ease;
+    text-align: center;
+    padding-bottom: 10px;
+    flex-direction: column;
+}
+
+.productCard:hover {
+    transform: scale(1.1);
+}
+
+.productCard img {
+    width: 70%;
+    height: auto;
+}
+
+.productCard h3 {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.filterButton {
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: lighter;
+}

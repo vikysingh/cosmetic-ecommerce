@@ -1,0 +1,34 @@
+
+@mixin fontSetter($size, $weight, $fColor) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $fColor;
+    text-transform: uppercase;
+}
+
+.mainHeading {
+    @include fontSetter(6rem, bolder, $primaryColor)
+}
+
+.titleHeading {
+    @include fontSetter(1.5rem, bolder, $primaryColor)
+}
+
+.lastHeading {
+    @include fontSetter(1rem, bold, $primaryColor)
+}
+
+.paragraph {
+    @include fontSetter(1rem, lighter, $primaryColor);
+    text-transform: unset;
+}
+
+.primaryColor {
+    color: $primaryColor;
+}
+.warningColor {
+    color: $warningColor;
+}
+.successColor {
+    color: $successColor;
+}

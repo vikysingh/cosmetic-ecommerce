@@ -1,0 +1,28 @@
+
+@mixin flexSetter($direction, $justifyContent, $alignItem) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItem;
+    flex-direction: $direction;
+}
+
+.flexCenterCenter {
+    @include flexSetter(unset, center, center);
+}
+
+.flexRowAroundCenter {
+    @include flexSetter(row, space-around, center);
+}
+
+.flexRowBetweenCenter {
+    @include flexSetter(row, space-between, center);
+}
+
+.flexColAroundCenter {
+    @include flexSetter(column, space-around, center);
+}
+
+.setSection {
+    width: 100vw;
+    height: auto;
+}
