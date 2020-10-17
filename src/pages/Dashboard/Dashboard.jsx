@@ -4,7 +4,6 @@ import { DashboardCard } from "../../components"
 import {  Typography, Row, Col, Button } from "antd"
 
 import styles from "./Dashboard.module.css"
-import globals from "../../styles/Globals.module.css"
 
 const {
     Title, 
@@ -36,9 +35,9 @@ export default function Dashboard() {
         <Row  >
             <Col xs={24} lg={8} >
             <DashboardCard title="Active orders" cardsList={[ 'each1', 'each2' ]} >
-                {/*<Paragraph> Nothing to show here </Paragraph>*/}
+                
                 {cardsList.map(card => <div 
-                    className={`${styles.DASHBOARD__PRODUCT_CARD} ${globals.flexRowStartCenter}`} >
+                    className={`${styles.DASHBOARD__PRODUCT_CARD} flexRowAroundCenter`} >
                         <img alt="" src={card.imgLink} />
                         <h3> {card.name} </h3>
                     </div> )}
@@ -47,7 +46,7 @@ export default function Dashboard() {
             <Col xs={24} lg={8} >
             <DashboardCard title="Order history">
                 {cardsList.map(card => <div 
-                    className={`${styles.DASHBOARD__PRODUCT_CARD} ${globals.flexRowStartCenter}`} >
+                    className={`${styles.DASHBOARD__PRODUCT_CARD} flexRowAroundCenter`} >
                         <img alt="" src={card.imgLink} />
                         <h3> {card.name} </h3>
                     </div> )}
@@ -59,7 +58,7 @@ export default function Dashboard() {
             </DashboardCard>
         </Col>
         </Row>
-        <Row className={globals.flexAllCenter} >
+        <Row className="flexCenterCenter" >
             <Button danger> Delete my account </Button>
         </Row>
         </div>

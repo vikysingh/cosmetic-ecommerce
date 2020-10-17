@@ -1,24 +1,20 @@
 import React from "react"
-import { Typography } from "antd"
 
 import { connect } from "react-redux"
 
 import styles from "./FilterDisplayer.module.css"
-import globalStyles from "../../../styles/Globals.module.css"
 
 import FilterCard from "./FilterCard"
 
 import { removeProduct, removeBrand, removeMinPrice, removeMaxPrice } from "../../../redux/actions/filters/filterActionGenerators"
 import PropTypes from "prop-types"
 
-const { Title } = Typography
-
 function FilterDisplayer({ product, brand, minPrice, maxPrice, dispatch }) {
     return (
-        <div className={globalStyles.flexRowAroundCenter} id={styles.FILTER_DISPLAYER} >
+        <div className={`flexRowAroundCenter ${styles.FILTER_DISPLAYER} `} >
             {
                 product === '' && brand === '' && minPrice === 0 && maxPrice === 100 ? 
-                <Title level={4}> No filters applied </Title> :
+                <h4 className="paragraph" > No filters applied </h4> :
                 <>
                     { product !== '' && <FilterCard type="Product" name={product}
                     dispatch={dispatch} action={removeProduct} /> }

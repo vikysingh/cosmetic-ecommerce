@@ -3,7 +3,6 @@ import React, { useRef } from "react"
 import { FilterOutlined, CloseOutlined } from "@ant-design/icons"
 
 import styles from "./Filterbar.module.css"
-import globalStyles from "../../../styles/Globals.module.css"
 
 import Filter from "../Filter/Filter"
 import PriceFilter from "../PriceFilter/PriceFilter"
@@ -26,14 +25,14 @@ export default function Filterbar() {
 
     return <div className={styles.FILTER_BAR}  >
 
-        <div id={styles.FILTER_BAR__head} className={globalStyles.flexRowEndCenter}>
+        <div className={`flexRowEndCenter ${styles.FILTER_BAR__head}`}>
             <label> Refine search </label>
-            <FilterOutlined id={styles.FILTER_BAR__open_icon}
+            <FilterOutlined className={styles.FILTER_BAR__open_icon}
             onClick={openFilters}/>
         </div>
 
         <div className={styles.FILTER_BAR__body} ref={filterBarRef}>
-            <CloseOutlined id={styles.FILTER_BAR__close_icon}
+            <CloseOutlined className={styles.FILTER_BAR__close_icon}
             onClick={closeFilters} />
             <Filter title="Products" filterList={ProductStatics.productType} type="products"  />
             <Filter title="Brands" filterList={ProductStatics.brands} type="brand"   />

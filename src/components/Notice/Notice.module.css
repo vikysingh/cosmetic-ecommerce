@@ -1,14 +1,11 @@
 .NOTICE {
-    height: auto;
-    width: 100vw;
     padding: 20px 0;
     text-align: center;
     background-color: #000;
-    color: #fff;
-    text-transform: uppercase;
+    color: #fff !important;
 }
 
 .NOTICE__icon {
     margin-right: 10px;
-    font-size: 1.4rem;
+    color: #fff !important;
 }

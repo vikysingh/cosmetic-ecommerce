@@ -35,3 +35,4 @@ export { default as AddressInfo } from "./Checkout/AddressInfo/AddressInfo"
 export { default as PaymentLeftCol } from "./Checkout/Payment/PaymentLeftCol"
 
 export { default as DashboardCard } from "./User/Dashboard/DashboardCard"
+export { default as Login } from "./User/UserRegistration/Login"

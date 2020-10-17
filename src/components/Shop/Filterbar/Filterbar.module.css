@@ -5,26 +5,26 @@
     background-color: #eee;
 }
 
-#FILTER_BAR__head {
+.FILTER_BAR__head {
     width: 100%;
     height: 40px;
     display: none;
+    justify-content: flex-end;
 }
 
-#FILTER_BAR__head label {
+.FILTER_BAR__head label { 
     opacity: 0.8;   
 }
 
-#FILTER_BAR__open_icon {
+.FILTER_BAR__open_icon {
     font-size: 1.3rem;
     float: right;
     margin-right: 15px;
     padding: 10px;
     height: 100%;
-    /* display:none; */
 }
 
-#FILTER_BAR__close_icon {
+.FILTER_BAR__close_icon {
     display: none;
 }
 
@@ -48,11 +48,11 @@
         display: none;
     }
 
-    #FILTER_BAR__head {
+    .FILTER_BAR__head {
         display: flex;
     }
 
-    #FILTER_BAR__close_icon {
+    .FILTER_BAR__close_icon {
         display: block;
         float: right;
         margin-top: 15px;

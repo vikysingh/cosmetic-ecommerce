@@ -16,6 +16,7 @@
     height: auto;
     border: 1px solid #eee;
     width: 80%;
+    justify-content: flex-start !important;
 }
 
 .DASHBOARD__PRODUCT_CARD img {

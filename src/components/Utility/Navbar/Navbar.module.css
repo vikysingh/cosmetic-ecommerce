@@ -1,4 +1,4 @@
-#NAVBAR {
+.NAVBAR {
     height: 70px;
     max-width: calc(100vw - 10px);
     padding: 5px;
@@ -8,13 +8,13 @@
     /* background-color: rgb(167, 162, 162); */
 }
 
-#NAVBAR__logo {
-    font-weight: 900;
+.NAVBAR__logo {
     font-family: 'Roboto', sans-serif;
     margin-left: 5%;
+    text-transform: unset !important;
 }
 
-#NAVBAR__opener, #NAVBAR__closer {
+.NAVBAR__opener, .NAVBAR__closer {
     color: #ff003c;
     display: none;
     right: 20px;
@@ -22,61 +22,61 @@
     position: absolute;
 }
 
-#NAVBAR__content {
+.NAVBAR__content {
     width: 60%;
 }
 
-#NAVBAR__link_items {
+.NAVBAR__link_items {
     width: 40%;
     text-decoration: none;
     margin-left: -10%;
 }
 
-#NAVBAR__link_items > a {
+.NAVBAR__link_items > a {
     color:#000;
     font-weight: 400;
     font-size: 1.1rem;
     transition: 300ms all ease;
 }
 
-#NAVBAR__link_items > a:hover {
-    font-weight: bolder;
+.NAVBAR__link_items > a:hover {
+    font-weight: bold;
 }
 
-#NAVBAR__user_options {
+.NAVBAR__user_options {
     margin-right: 5%;
     width: 10%;
 }
 
-#NAVBAR__user_options a  {
+.NAVBAR__user_options a  {
     color: #000;
     font-size: 1.4rem;
 }
 
 @media (max-width: 760px) {
-    #NAVBAR {
+    .NAVBAR {
         /* position: fixed;
         top: 0;
         left: 0;
         background-color: #fff; */
         z-index: 5;
     }
-    #NAVBAR__logo {
+    .NAVBAR__logo {
         font-size: 1rem;
     }
 
-    #NAVBAR__opener{
+    .NAVBAR__opener{
         display: block;
     }
 
-    #NAVBAR__content {
+    .NAVBAR__content {
         background-color: #fff;
         position: absolute;
         width: 100%;
         top: 70px;
         left: 0;
 
-        flex-direction: column;
+        flex-direction: column !important;
         justify-content: center;
         z-index: 5;
         margin-top: 60px;
@@ -87,23 +87,23 @@
         transition: 300ms all ease;
     }
 
-    #NAVBAR__link_items {
-        flex-direction: column;
+    .NAVBAR__link_items {
+        flex-direction: column !important;
         justify-content: center;
         width: 100%;
         margin: 0;
     }
 
-    #NAVBAR__link_items a {
+    .NAVBAR__link_items a {
         margin: 14px 0;
     }
 
-    #NAVBAR__user_options {
+    .NAVBAR__user_options {
         width: 20%;
         margin: 10px 0;
     }
 
-    #NAVBAR:hover > #NAVBAR__content  {
+    .NAVBAR:hover > .NAVBAR__content  {
         transition: 300ms all ease;
         transform: scaleY(1);
     }

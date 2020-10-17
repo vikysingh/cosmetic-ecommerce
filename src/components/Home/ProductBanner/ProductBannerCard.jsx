@@ -1,33 +1,36 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
-import styles from "./ProductBanner.module.css"
-import { Typography } from "antd"
-import routes from "../../../constants/routes.json"
-
-import { connect } from "react-redux"
-
-import { setProduct } from "../../../redux/actions/filters/filterActionGenerators"
 import PropTypes from "prop-types"
 
-const { Title } = Typography
+import ThemeButton from "../../Utility/Button/Button"
 
-function Productbannercard({ imgSrc, text, dispatch, productType}) {
+import routes from "../../../constants/routes.json"
+
+function Productbannercard({ title, imgSrc, text, setDispatch }) {
+    let history = useHistory()
+
     return (
-        <Link to={routes.shop} className={styles.PRODUCT_BANNER__card}
-        onClick={() => dispatch(setProduct(productType)) }
-         >
+        <div className="promotionBanners" >
             <img src={imgSrc} alt="" />
-            <Title level={3}> { text } </Title>
-        </Link>
+            <h2 className="titleHeading" >{title}</h2>
+            <p className="paragraph" >{text}</p>
+
+            <ThemeButton className="primaryActionButton"
+            clickHandler={() => {
+                history.push(routes.shop)
+                setDispatch()
+            }}
+            > SHOP NOW  </ThemeButton>
+        </div>
     )
 }
 
 Productbannercard.propTypes = {
-    imgSrc: PropTypes.string.isRequired,
-    text: PropTypes.string
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
 }
 
-const mapStateToProps = state => state
 
-export default connect(mapStateToProps)(Productbannercard)
+
+export default Productbannercard

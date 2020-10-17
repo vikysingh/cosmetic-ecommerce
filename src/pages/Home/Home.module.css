@@ -1,15 +1,10 @@
-#HOME {
-    width: 100vw;
-    height: auto;
+.HOME > h2 {
+    background-color: #eee;
+    width: 100%;
+    padding: 40px 0 0 5%;
+    margin-bottom: 0;
 }
 
-/* #HOME > div:nth-child(3) {
-    max-height: 70vh;
-    overflow: hidden;
+.HOME > div > button {
+    margin-top: 50px;
 }
-
-#HOME > div:nth-child(3) > div {
-    padding-left: 5%;
-    height: 100%;
-    overflow: hidden;
-} */

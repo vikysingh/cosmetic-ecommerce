@@ -1,7 +1,6 @@
 import React from 'react'
 
 import styles from "./MapCartItems.module.css"
-import globalStyles from "../../../styles/Globals.module.css"
 
 import CartCard from "../CartCard/CartCard"
 
@@ -12,7 +11,7 @@ import PropTypes from "prop-types"
 function Mapcartitems({ productList, dispatch, onRead }) {
     
     return (
-        <div id={styles.MAP_CART_ITEMS} className={globalStyles.flexColumnCenterCenter}>
+        <div className={`flexColAroundCenter ${styles.MAP_CART_ITEMS}`}>
             {
                 productList === undefined && productList.length === 0 ? <h4>Loading</h4> :
                 productList.map(cartItem => <CartCard onRead={onRead} imgUrl={cartItem.imgUrl} key={cartItem.id}
@@ -23,7 +22,7 @@ function Mapcartitems({ productList, dispatch, onRead }) {
         </div>
     )
 }
-
+ 
 Mapcartitems.propTypes = {
     productsList: PropTypes.array,
     onRead: PropTypes.bool

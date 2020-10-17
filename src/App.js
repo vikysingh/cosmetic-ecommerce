@@ -7,10 +7,13 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 import routes from "./constants/routes.json"
 
-import { Home, ProductDetail, Contact, Shop, Cart, ShippingReturn, Checkout, Dashboard, NotFound } from "./pages"
+import { Home, ProductDetail, Contact, Shop, Cart, 
+    ShippingReturn, Checkout, Dashboard, NotFound, MainLogin } from "./pages"
 
 import { Navbar, Footer, Notice, AddressInfo, PaymentLeftCol } from "./components"
-import "./styles/App.css"
+
+//import "./styles/App.css"
+import "./styles/css/main.css"
 
 export default function App() {
 
@@ -81,7 +84,14 @@ export default function App() {
                         <Footer />
                     </Route>
 
-                    <Route>
+                    <Route path={routes.account}>
+                        <Notice />
+                        <Navbar />
+                        <MainLogin />
+                        <Footer />
+                    </Route>
+
+                    <Route path="*" >
                         <Notice />
                         <Navbar />
                         <NotFound />

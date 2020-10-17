@@ -1,24 +1,30 @@
 import React from 'react'
 
+import { useHistory } from "react-router-dom"
+
 import { Hero, ProductBanner, ProductCard, ProductMapper, BigLabel, 
-    Newsletter, DiscountBanner, Messages } from "../../components"
+    Newsletter, Messages, ThemeButton } from "../../components"
 import styles from "./Home.module.css"
 
 import useFetchProducts from "../../contexts/useFetchProducts"
 
+import routes from "../../constants/routes.json"
+
 export default function Home() {
 
-    const { error, loading, data, fetchProducts } = useFetchProducts()
+    const { loading, data, fetchProducts } = useFetchProducts()
 
     React.useEffect(() => {
-        fetchProducts('https://makeup-api.herokuapp.com/api/v1/products.json?brand=essie')   
+        fetchProducts('https://makeup-api.herokuapp.com/api/v1/products.json?brand=fenty')   
     }, [])
 
+    let history = useHistory()
+
     return (
-        <div id={styles.HOME}>
+        <div className={`setSection ${styles.HOME}`}>
             <Hero />
             <ProductBanner /> 
-            <BigLabel text="Latest products" />
+            <BigLabel text="New Arrivals" />
             {
                 !data ? loading && <Messages type="loading" />:
                 <ProductMapper
@@ -28,7 +34,9 @@ export default function Home() {
                 direction="row"
                  />
             }
-            <DiscountBanner />
+            <div className="flexCenterCenter">
+                <ThemeButton clickHandler={() => history.push(routes.shop)}  > SEE ALL PRODUCTS </ThemeButton>
+            </div>
             <Newsletter />
         </div>
     )

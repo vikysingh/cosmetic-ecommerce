@@ -4,8 +4,6 @@ import { Slider, Typography } from "antd"
 import { connect } from "react-redux"
 import { setMinPrice, setMaxPrice } from "../../../redux/actions/filters/filterActionGenerators"
 
-import globalStyles from "../../../styles/Globals.module.css"
-
 import styles from "./PriceFilter.module.css"
 
 const { Title } = Typography
@@ -19,7 +17,7 @@ function PriceFilter({dispatch}) {
 
     return <div className={styles.PRICE_FILTER} >
         <Title level={3}> Price </Title>
-        <div className={globalStyles.flexRowBetweenCenter} > 
+        <div className="flexRowAroundCenter" > 
             <Title level={4}> Min </Title>
             <Title level={4}> Max </Title>
         </div> 

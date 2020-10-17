@@ -1,16 +1,13 @@
 import React from "react"
 
-import { Typography } from "antd"
-
 import { TextContainer } from "../../components"
 
 import styles from "./ShippingReturn.module.css"
 
-const { Title, } = Typography
 
 export default function ShippingReturn() {
-    return <div className={styles.SHIPPING_RETURN} >
-        <Title level={1}> Shipping and Returns </Title>
+    return <div className={` setSection ${styles.SHIPPING_RETURN}`} >
+        <h1 className="titleHeading" > Shipping and Returns </h1>
         <TextContainer title="Within European Union" >
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         </TextContainer>

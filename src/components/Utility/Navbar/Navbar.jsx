@@ -4,9 +4,8 @@ import { Link } from "react-router-dom"
 import { Typography } from "antd"
 import 'antd/dist/antd.css';
 
-import { /*UserOutlined,*/ ShoppingCartOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons"
+import { UserOutlined, ShoppingCartOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons"
 
-import globalStyles from "../../../styles/Globals.module.css"
 import navStyles from "./Navbar.module.css"
 
 import routes from "../../../constants/routes.json"
@@ -49,30 +48,40 @@ function Nav() {
     }
     
     return (
-        <nav id={navStyles.NAVBAR} className={globalStyles.flexRowAroundCenter} >
-            <Title level={3} className={globalStyles.flexAllCenter} id={navStyles.NAVBAR__logo} >
+        <nav className={`flexRowAroundCenter ${navStyles.NAVBAR}`} >
+            <h3 className={`flexAllCenter titleHeading successColor ${navStyles.NAVBAR__logo}`} >
                 CosmeticComerce
-            </Title>
+            </h3>
 
-            <MenuOutlined id={navStyles.NAVBAR__opener}
+            <MenuOutlined className={navStyles.NAVBAR__opener}
             onClick={() => open()} ref={NavOpenerRef} />
 
-            <CloseOutlined id={navStyles.NAVBAR__closer}
+            <CloseOutlined className={navStyles.NAVBAR__closer}
             onClick={() => close()} ref={NavCloserRef} />
 
             <div ref={NavContentRef}
-            id={navStyles.NAVBAR__content} className={globalStyles.flexRowAroundCenter} >
-                <div id={navStyles.NAVBAR__link_items} className={globalStyles.flexRowAroundCenter}>
-                    <Link onClick={() => closeFromChilds()} to={routes.home} exact> Home </Link>
-                    <Link onClick={() => closeFromChilds()} to={routes.shop}> Shop </Link>
-                    <Link onClick={() => closeFromChilds()} to={routes.contact}> Contact us </Link>
+            className={`flexRowAroundCenter ${navStyles.NAVBAR__content}`} >
+
+                <div className={`flexRowAroundCenter ${navStyles.NAVBAR__link_items}`}>
+
+                    <Link onClick={() => closeFromChilds()}
+                    className="paragraph"
+                     to={routes.home} exact> Home </Link>
+                     
+                    <Link onClick={() => closeFromChilds()}
+                    className="paragraph"
+                     to={routes.shop}> Shop </Link>
+                     
+                    <Link onClick={() => closeFromChilds()}
+                    className="paragraph"
+                     to={routes.contact}> Contact us </Link>
+                     
                 </div>
 
-                <span className={globalStyles.flexRowAroundCenter} 
-                id={navStyles.NAVBAR__user_options}>
-                    {/* <Link onClick={() => closeFromChilds()} to={routes.account} >
+                <span className={`flexRowAroundCenter ${navStyles.NAVBAR__user_options} `} >
+                    <Link onClick={() => closeFromChilds()} to={routes.account} >
                         <UserOutlined />
-                    </Link> */}
+                    </Link>
                     <Link onClick={() => closeFromChilds()} to={routes.cart} >
                         <ShoppingCartOutlined />
                     </Link>

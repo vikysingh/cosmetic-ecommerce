@@ -1,13 +1,12 @@
 import React from "react"
 
-import { Typography, Input, Tooltip, Modal } from "antd"
+import { Input, Tooltip, Modal } from "antd"
 
 import styles from "./Form.module.css"
 // import { ThemeButton } from "../../index"
 
 import { useFormik } from 'formik';
 
-const { Title } = Typography
 const { TextArea } = Input
 
 export default function ContactForm() {
@@ -33,7 +32,7 @@ export default function ContactForm() {
     }
 
     return <form action="post" className={styles.CONTACT_FORM}  onSubmit={formik.handleSubmit}>
-        <Title level={4}> Get in touch </Title>
+        <h4 className="titleHeading" > Get in touch </h4>
         <Tooltip
                 trigger={['focus']}
                 title="Name"

@@ -5,6 +5,7 @@ import RightColText from './Childs/RightColText';
 import { connect } from "react-redux"
 
 import { addToCart } from "../../../redux/actions/cart/cartActionGenerators"
+//import ThemeButton from "../../Utility/Button"
 
 import styles from "./RightCol.module.css"
 
@@ -31,9 +32,9 @@ function RightCol({ name, type, price, imgUrl, description, dispatch, id, cartPr
     }
     
     return (
-        <div id={styles.RIGHT_COL} >
+        <div className={styles.RIGHT_COL} >
 
-            <div id={styles.RIGHT_COL__upper}>
+            <div className={styles.RIGHT_COL__upper}>
                 <RightColText name={name} type={type} price={price} description={description} />
                 
                 <button 

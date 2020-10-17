@@ -1,15 +1,13 @@
-#FILTER_DISPLAYER {
-    justify-content: start;
+.FILTER_DISPLAYER {
+    justify-content: start !important;
     height: auto;
     width: 100%;
     padding: 5% 0;
     padding-left: 5%;
 }
 
-#FILTER_DISPLAYER h4 {
+.FILTER_DISPLAYER h4 {
     margin: 0;
-    font-weight: lighter;
-    font-size: 1.1rem;
 }
 
 .FILTER_DISPLAYER__filter_card {
@@ -23,22 +21,18 @@
     margin: 0 5px;
 }
 
-#FILTER_DISPLAYER__close_icon {
+.FILTER_DISPLAYER__close_icon {
     cursor: pointer;
 }
 
 @media (max-width: 600px) {
-    #FILTER_DISPLAYER {
+    .FILTER_DISPLAYER {
         flex-wrap: wrap;
     }
 
-    #FILTER_DISPLAYER h4 {
+    .FILTER_DISPLAYER h4 {
         width: 90%;
     }
-
-    /*#FILTER_DISPLAYER > div:nth-child(2) {
-        margin-left: 0;
-    }*/
 
     .FILTER_DISPLAYER__filter_card {
         margin: 4px 7px;

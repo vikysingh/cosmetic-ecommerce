@@ -1,40 +1,40 @@
-#NEWSLETTER {
+.NEWSLETTER {
     background-color: #fff;
     padding: 5% 0;
+    text-align: center;
 }
 
-#NEWSLETTER > form {
-    width: 30%;
+.NEWSLETTER > form {
+    width: 40%;
     margin-top: 20px;
 }
 
-#NEWSLETTER button, #NEWSLETTER input {
+.NEWSLETTER button, .NEWSLETTER input {
     height: 50px;
 }
 
-#NEWSLETTER input {
+.NEWSLETTER input {
     width: 70%;
     background-color: #eee;
 }
 
-#NEWSLETTER button {
-    width: 30%;
-    border: none;
-    background: #000;
-    color: #fff;
-    font-weight: bolder;
-    font-size: 1rem;
-    height: 5 5px;
-}
-
 @media (max-width: 1024px) {
-    #NEWSLETTER form {
+    .NEWSLETTER form {
         width: 45%;
     }
 }
 
 @media (max-width: 600px) {
-    #NEWSLETTER form {
+    .NEWSLETTER {
+        margin-top: 50px;
+    }
+    .NEWSLETTER p {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .NEWSLETTER form {
         width: 90%;
     }
 }

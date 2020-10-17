@@ -1,7 +1,6 @@
 import React from "react"
 
 import styles from "./ProductMapper.module.css"
-import globalStyles from "../../../styles/Globals.module.css"
 
 import Messages from "../Messages/Messages"
 
@@ -10,7 +9,7 @@ import PropTypes from "prop-types"
 function ProductMapper({ productsList, cardType, direction }) {
 
     return <div id={styles.PRODUCT_MAPPER} >
-        <div className={globalStyles.flexRowAroundCenter} style={{ flexDirection: direction }} >
+        <div className="flexRowAroundCenter" style={{ flexDirection: direction }} >
         {
             productsList.length > 1 ? productsList.map(product => cardType(product.api_featured_image, product.name, product.id))
             : <Messages type="search0" />

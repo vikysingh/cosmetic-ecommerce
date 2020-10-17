@@ -1,14 +1,9 @@
 import React from "react"
 
-import { Typography } from "antd"
-
-import globalStyles from "../../../styles/Globals.module.css"
 import styles from "./CartBoard.module.css"
  
 import { ThemeButton } from "../../index"
 import PropTypes from 'prop-types'
-
-import { Link } from "react-router-dom"
 
 import routes from "../../../constants/routes.json"
 
@@ -16,37 +11,33 @@ import { useHistory } from "react-router-dom"
 
 import auth from "../../../utils/auth"
 
-const { Title } = Typography
-
 function CartBoard({ subtotal, shippingPrice, total }) {
 
     let history = useHistory()
 
+    function proceed() {
+        auth.allowCheckout(() => {
+            history.push(routes.checkoutAddress)
+        })
+    }
+
     return <div className={styles.CART_BOARD} >
-        <Title level={3}> Order Summary </Title>
+        <h3 className="paragraph" > Order Summary </h3>
         <hr />
-        <div className={globalStyles.flexRowBetweenCenter} >
-            <Title level={4}> Subtotal </Title>
+        <div className="flexRowBetweenCenter" >
+            <h4 className="paragraph" > Subtotal </h4>
             <strong> €{subtotal} </strong> 
         </div>
-        <div className={globalStyles.flexRowBetweenCenter} >
-            <Title level={4}> Shipping </Title>
+        <div className="flexRowBetweenCenter" >
+            <h4 className="paragraph" > Shipping </h4>
             <strong> €{shippingPrice} </strong> 
         </div>
         <hr />
-        <div className={globalStyles.flexRowBetweenCenter} >
-            <Title level={4}> Total </Title>
+        <div className="flexRowBetweenCenter" >
+            <h4 className="paragraph" > Total </h4>
             <strong> €{total} </strong> 
         </div>
-        <button onClick={() => {
-            auth.allowCheckout(() => {
-                history.push(routes.checkoutAddress)
-            })
-        }} > 
-            {/* <Link to={routes.checkoutAddress} > */}
-                Go to checkout
-            {/* </Link> */}
-        </button>
+        <ThemeButton clickHandler={proceed} > Go to checkout</ThemeButton>
     </div>
 }
 

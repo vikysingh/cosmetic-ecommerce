@@ -1,9 +1,7 @@
 import React from "react"
 
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons"
-//import { InputNumber } from "antd"
 
-import globalStyles from "../../../styles/Globals.module.css"
 import styles from "./ProductQuantity.module.css"
 
 import { connect } from "react-redux"
@@ -16,15 +14,15 @@ function ProductQuantity({ cartProducts, id, dispatch, quantity }) {
 
     console.log("log from quantity: ", cartProducts)
 
-    return <div className={globalStyles.flexRowStartCenter} id={styles.PRODUCT_QUANTITY} >
-        <PlusOutlined id={styles.PRODUCT_QUANTITY__btn}
+    return <div className={`flexRowStartCenter ${styles.PRODUCT_QUANTITY} `} >
+        <PlusOutlined className={styles.PRODUCT_QUANTITY__btn}
         onClick={() => {
             dispatch(increaseQuantity(id))
         }}
          />
             <label > { quantity } </label>
             
-        <MinusOutlined id={styles.PRODUCT_QUANTITY__btn} 
+        <MinusOutlined className={styles.PRODUCT_QUANTITY__btn} 
         onClick={() => {
             dispatch(decreaseQuantity(id))
         }}/>

@@ -13,11 +13,12 @@
     height: 30px;
     width: 100%;
     padding: 0 5%;
+    justify-content: space-between !important;
 }
 
 .PRICE_FILTER h4 {
     margin: 0 !important;
-    font-weight: lighter !important;
+    font-weight: lighter;
     font-size: 1rem;
 }
 

@@ -1,18 +1,16 @@
 import React from 'react';
-import { Typography } from "antd"
+
 import PropTypes from "prop-types"
 
 import styles from "../RightCol.module.css"
 
-const { Title, Paragraph } = Typography
-
 function RightColText({ name, type, price, description }) {
     return (
         <>
-            <Title level={2}> {name} </Title>
-            <Title level={4}> {type} </Title>
-            <Title level={3}> €{price} </Title>
-            <Paragraph className={styles.RIGHT_COL__product_description}> {description} </Paragraph>
+            <h2 className="titleHeading" > {name} </h2>
+            <h4> {type} </h4>
+            <h3 className="lastHeading" > €{price} </h3>
+            <p className={` paragraph ${styles.RIGHT_COL__product_description}`}> {description} </p>
         </>
     )
 }

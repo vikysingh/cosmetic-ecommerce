@@ -4,8 +4,6 @@ import {  Typography } from "antd"
 
 import styles from "./DashboardCard.module.css"
 
-// import globals from "../../../styles/Globals.module.css"
-
 const { Title }  =Typography
 
 export default function Dashboardcard({ title, children }) {

@@ -3,7 +3,6 @@ import {  Row, Col, Typography } from "antd"
 import 'antd/dist/antd.css';
 
 import styles from "./DiscountBanner.module.css"
-import globalStyles from "../../../styles/Globals.module.css"
 
 import AboutImg from "../../../assets/images/foundation_banner.jpg"
 
@@ -23,7 +22,7 @@ export default function DiscountBanner() {
         </Col>
         <Col lg={12} md={12} xs={24} 
         id={styles.ABOUT__right_col}
-         className={globalStyles.flexAllCenter}>
+         className="flexCenterCenter">
             <img src={AboutImg} alt=""  />
         </Col>
     </Row>
