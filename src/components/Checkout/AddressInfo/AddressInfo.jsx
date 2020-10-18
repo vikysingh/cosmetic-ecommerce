@@ -70,6 +70,7 @@ export default function AddressInfo() {
             onChange={formik.handleChange} required={true} name="address" />
 
             <Input type="text" placeholder="Apartment, suite etc.(optional)"
+            required={false}
             value={formik.values.apartment} onChange={formik.handleChange} name="apartment" />
 
             <Input type="text" placeholder="City" value={formik.values.city}
@@ -85,7 +86,7 @@ export default function AddressInfo() {
                 { checkouts.countries.map(country => <Option value={country} key={country} > { country } </Option> ) }
             </Select>
             
-            <Input pattern="[0-9]*" name="zip" type="text" value={formik.values.zip}
+            <Input pattern="[0-9]*" name="zip" type="number" value={formik.values.zip}
             onChange={formik.handleChange} required={true} />
 
             {/* <ThemeButton theme="shop" >

@@ -31,13 +31,26 @@ export default function PaymentLeftCol() {
             number: '',
         },
         onSubmit: values => {
-            setModalVisible(true)
+            if((values.number.toString().length === 16) &&
+            (values.cvc.toString().length >= 3) &&
+            (values.expiry.toString().length >= 4)) {
+                setModalVisible(true)
+            } else {
+                errorModal()
+            }
         },
     })
 
     function handleModalClose() {
         setModalVisible(false)
         history.push(routes.cart)
+    }
+
+    function errorModal() {
+        Modal.error({
+            title: checkouts.notices.formValidationErrorTitle,
+            content: checkouts.notices.formValidationErrorMessage
+        })
     }
 
     return <div className={styles.PAYMENT__LEFT_COL} >
@@ -63,10 +76,7 @@ export default function PaymentLeftCol() {
             <Button key="submit" type="primary" onClick={handleModalClose}>
               Ok
             </Button>
-        ]}
-        >
-            <strong> { checkouts.notices.paymentSuccessMessage } </strong>
-        </Modal>
+        ]} > { checkouts.notices.paymentSuccessMessage } </Modal>
 
         <Cards
           cvc={formik.values.cvc}
@@ -80,7 +90,7 @@ export default function PaymentLeftCol() {
 
         <form action="post" onSubmit={formik.handleSubmit} >
             <Input type="number" placeholder="Card number" name="number"
-            maxLength={16} value={formik.values.number} required={true}
+            maxLength={16} minLength={16} value={formik.values.number} required={true}
             onFocus={e => setFocus(e.target.name) }
             onChange={formik.handleChange} />
 
@@ -90,12 +100,12 @@ export default function PaymentLeftCol() {
             onChange={formik.handleChange} />
 
             <Input type="number" placeholder="Valid thru" name="expiry"
-            maxLength={5} value={formik.values.expiry} required={true}
+            maxLength={5} minLength={4} value={formik.values.expiry} required={true}
             onFocus={e => setFocus(e.target.name)}
             onChange={formik.handleChange} />
 
             <Input type="number" placeholder="CVC" name="cvc"
-            maxLength={4} value={formik.values.cvc} required={true}
+            maxLength={4} minLength={3} value={formik.values.cvc} required={true}
             onFocus={e => setFocus(e.target.name)}
             onChange={formik.handleChange} />
 
