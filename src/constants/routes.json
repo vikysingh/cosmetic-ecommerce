@@ -8,5 +8,6 @@
     "shippingReturn": "/shippings",
     "checkoutAddress": "/checkout/address",
     "checkoutPayment": "/checkout/payment",
-    "dashboard": "/dashboard"
+    "dashboard": "/dashboard",
+    "account": "/account"
 }
