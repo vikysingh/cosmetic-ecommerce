@@ -11,6 +11,8 @@
     ],
     "notices": {
         "paymentSuccessTitle": "Payment notice",
-        "paymentSuccessMessage": "Your payment was successful and we've started shipping of your products"
+        "paymentSuccessMessage": "Your payment was successful and we've started shipping of your products",
+        "formValidationErrorTitle": "Form submission",
+        "formValidationErrorMessage": "Please fill in the form correctly"
     }
 }
