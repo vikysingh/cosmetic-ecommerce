@@ -11,6 +11,9 @@ potrebbere facilitare lo sviluppo ed aumantare la produttività.
 Oltre a questo, con un negozio online si ha anche la possibilità di avere esperienza con applicazioni **CRUD**, 
 anche se in passato avevo già creato tale applicazione ma essi erano spicifiche a vanilla JS e non ReactJS.
 
+### Note
+Questo progetto essendo creato in ReactJS, ho solo implementato il FrontEnd e nel futuro potrei decidere di aggiungere una struttura backend come Firebase o di MERN stack.
+
 ### Tecnologie per sviluppo
 * Create-react-app
 * ReactJS
@@ -21,9 +24,6 @@ anche se in passato avevo già creato tale applicazione ma essi erano spicifiche
 
 ### Tecnologie per design
 * Figma
-
-### Backend(attual non implementato)
-* Firebase
 
 ### Piattaforma di deployment/hosting
 * Netlify
