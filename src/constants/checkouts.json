@@ -11,7 +11,7 @@
     ],
     "notices": {
         "paymentSuccessTitle": "Payment notice",
-        "paymentSuccessMessage": "Your payment was successful and we've started shipping of your products",
+        "paymentSuccessMessage": "Your payment was successful and we will keep you updated through email. Click Ok to return to cart",
         "formValidationErrorTitle": "Form submission",
         "formValidationErrorMessage": "Please fill in the form correctly"
     }
