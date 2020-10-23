@@ -72,6 +72,7 @@ export default function PaymentLeftCol() {
         <Modal
         title={checkouts.notices.paymentSuccessTitle}
         visible={modalVisible}
+        closeIcon={<></>}
         footer={[
             <Button key="submit" type="primary" onClick={handleModalClose}>
               Ok
@@ -110,7 +111,7 @@ export default function PaymentLeftCol() {
             onChange={formik.handleChange} />
 
             {/* <ThemeButton theme="shop"> Complete payment </ThemeButton> */}
-            <button type="submit" > Complete payment </button>
+            <button type="submit" className="primaryActionButton" > Complete payment </button>
         </form>
     </div>
 }

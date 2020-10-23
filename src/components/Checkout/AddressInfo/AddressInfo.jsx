@@ -94,7 +94,7 @@ export default function AddressInfo() {
                     Go to payment
                 </Link>
             </ThemeButton>   */}
-            <button type="submit"> Submit </button>
+            <button type="submit"> Continue to payment </button>
         </form>
     </div>
 }
