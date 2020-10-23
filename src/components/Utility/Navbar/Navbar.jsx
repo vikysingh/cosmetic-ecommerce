@@ -1,16 +1,11 @@
 import React, { useRef } from 'react';
 import { Link } from "react-router-dom"
 
-import { Typography } from "antd"
-import 'antd/dist/antd.css';
-
-import { UserOutlined, ShoppingCartOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons"
+import { ShoppingCartOutlined, MenuOutlined, CloseOutlined } from "@ant-design/icons"
 
 import navStyles from "./Navbar.module.css"
 
 import routes from "../../../constants/routes.json"
-
-const {  Title } = Typography
 
 function Nav() {
 
@@ -79,9 +74,6 @@ function Nav() {
                 </div>
 
                 <span className={`flexRowAroundCenter ${navStyles.NAVBAR__user_options} `} >
-                    <Link onClick={() => closeFromChilds()} to={routes.account} >
-                        <UserOutlined />
-                    </Link>
                     <Link onClick={() => closeFromChilds()} to={routes.cart} >
                         <ShoppingCartOutlined />
                     </Link>
