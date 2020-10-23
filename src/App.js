@@ -8,12 +8,12 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 import routes from "./constants/routes.json"
 
 import { Home, ProductDetail, Contact, Shop, Cart, 
-    ShippingReturn, Checkout, Dashboard, NotFound, MainLogin } from "./pages"
+    ShippingReturn, Checkout, NotFound } from "./pages"
 
 import { Navbar, Footer, Notice, AddressInfo, PaymentLeftCol } from "./components"
 
-//import "./styles/App.css"
 import "./styles/css/main.css"
+import 'antd/dist/antd.css';
 
 export default function App() {
 
@@ -74,20 +74,6 @@ export default function App() {
                         <Notice />
                         <Navbar />
                         <Checkout leftCol={<PaymentLeftCol />} />
-                        <Footer />
-                    </Route>
-
-                    <Route path={routes.dashboard}>
-                        <Notice />
-                        <Navbar />
-                        <Dashboard />
-                        <Footer />
-                    </Route>
-
-                    <Route path={routes.account}>
-                        <Notice />
-                        <Navbar />
-                        <MainLogin />
                         <Footer />
                     </Route>
 
