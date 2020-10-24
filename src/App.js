@@ -10,7 +10,9 @@ import routes from "./constants/routes.json"
 import { Home, ProductDetail, Contact, Shop, Cart, 
     ShippingReturn, Checkout, NotFound } from "./pages"
 
-import { Navbar, Footer, Notice, AddressInfo, PaymentLeftCol } from "./components"
+import Layout from "./pages/Layout"
+
+import { AddressInfo, PaymentLeftCol } from "./components"
 
 import "./styles/css/main.css"
 import 'antd/dist/antd.css';
@@ -22,66 +24,57 @@ export default function App() {
             <BrowserRouter>
                 <Switch>
                     <Route path={routes.home} exact={true}>
-                        <Notice />
-                        <Navbar />
-                        <Home />
-                        <Footer />
+                        <Layout>
+                            <Home />
+                        </Layout>
                     </Route>
 
                     <Route path={routes.shop}>
-                        <Notice />
-                        <Navbar />
-                        <Shop />
-                        <Footer />
+                        <Layout>
+                            <Shop />
+                        </Layout>
                     </Route>
 
                     <Route path={routes.productDetail} exact={true}>
-                        <Notice />
-                        <Navbar />
-                        <ProductDetail />
-                        <Footer />
+                        <Layout>
+                            <ProductDetail />
+                        </Layout>
                     </Route>
 
                     <Route path={routes.cart}>
-                        <Notice />
-                        <Navbar />
-                        <Cart />
-                        <Footer />
+                        <Layout>
+                            <Cart />
+                        </Layout>
                     </Route>
 
                     <Route path={routes.contact}>
-                        <Notice />
-                        <Navbar />
-                        <Contact />
-                        <Footer />
+                        <Layout>
+                            <Contact />
+                        </Layout>
                     </Route>
 
                     <Route path={routes.shippingReturn}>
-                        <Notice />
-                        <Navbar />
-                        <ShippingReturn />
-                        <Footer />
+                        <Layout>
+                            <ShippingReturn />
+                        </Layout>
                     </Route>
 
                     <Route path={routes.checkoutAddress}>
-                        <Notice />
-                        <Navbar />
-                        <Checkout leftCol={<AddressInfo />} />
-                        <Footer />
+                        <Layout>
+                            <Checkout leftCol={<AddressInfo />} />
+                        </Layout>
                     </Route> 
 
                     <Route path={routes.checkoutPayment}>
-                        <Notice />
-                        <Navbar />
-                        <Checkout leftCol={<PaymentLeftCol />} />
-                        <Footer />
+                        <Layout>
+                            <Checkout leftCol={<PaymentLeftCol />} />
+                        </Layout>
                     </Route>
 
                     <Route path="*" >
-                        <Notice />
-                        <Navbar />
-                        <NotFound />
-                        <Footer />
+                        <Layout>
+                            <NotFound />
+                        </Layout>
                     </Route>
 
                 </Switch>
