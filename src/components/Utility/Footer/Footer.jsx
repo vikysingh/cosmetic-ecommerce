@@ -31,7 +31,6 @@ export default function Footer() {
             <div className="flexRowAroundCenter" >
                 <PaymentIcon className={styles.FOOTER__payment_icons} icon="visa" style={{ margin: 10, width: 50 }} />
                 <PaymentIcon className={styles.FOOTER__payment_icons} icon="mastercard" style={{ margin: 10, width: 50 }} />
-                <PaymentIcon className={styles.FOOTER__payment_icons} icon="paypal" style={{ margin: 10, width: 50 }} />
             </div>
         </div>
     </footer>
