@@ -1,28 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from "prop-types"
 
 import styles from "./LeftCol.module.css"
 
-function LeftCol({ imgList, alt }) {
-
-    const [ currentImage, setCurrentImage ] = useState(0)
+function LeftCol({ imgSrc, alt }) {
     
     return (
-        <div className={styles.LEFT_COL}>
-            <div className={`flexCenterCenter ${styles.LEFT_COL__upper}`} >
-                { imgList && <img src={imgList[currentImage]} alt={alt} /> }
-            </div>
-            <div className={`flexRowAroundCenter ${styles.LEFT_COL__lower}`} >
-                 
-                 <img src={imgList[0]} alt={alt} onClick={() => setCurrentImage(0)} />
-                 <img src={imgList[1]} alt={alt} onClick={() => setCurrentImage(1)} />
-            </div>
+        <div className={`flexCenterCenter ${styles.LEFT_COL}`}>
+            <img src={imgSrc} alt={alt} />
         </div>
     )
 }
 
 LeftCol.propTypes = {
-    imgList: PropTypes.array.isRequired,
+    imgSrc: PropTypes.string.isRequired,
     alt: PropTypes.string
 }
 
