@@ -28,7 +28,7 @@ export default function ProductDetail() {
                 productState.name === undefined ? <Messages type="loading" height="100vh" /> :
                 <Row>
                     <Col lg={12} xs={24}>
-                        <ProductDetailLeftCol imgList={[ productState.image_link, productState.api_featured_image ]}
+                        <ProductDetailLeftCol imgSrc={productState.api_featured_image}
                         alt=""
                         />
                     </Col>
