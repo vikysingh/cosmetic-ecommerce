@@ -7,19 +7,7 @@ import PropTypes from 'prop-types'
 
 import routes from "../../../constants/routes.json"
 
-import { useHistory } from "react-router-dom"
-
-import auth from "../../../utils/auth"
-
 function CartBoard({ subtotal, shippingPrice, total }) {
-
-    let history = useHistory()
-
-    function proceed() {
-        auth.allowCheckout(() => {
-            history.push(routes.checkoutAddress)
-        })
-    }
 
     return <div className={styles.CART_BOARD} >
         <h3 className="paragraph" > Order Summary </h3>
@@ -37,7 +25,7 @@ function CartBoard({ subtotal, shippingPrice, total }) {
             <h4 className="paragraph" > Total </h4>
             <strong> €{total} </strong> 
         </div>
-        <ThemeButton clickHandler={proceed} > Go to checkout</ThemeButton>
+        <ThemeButton > Go to checkout</ThemeButton>
     </div>
 }
 
