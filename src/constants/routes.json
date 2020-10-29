@@ -5,8 +5,5 @@
     "cart": "/cart",
     "about": "/about",
     "contact": "/contact",
-    "shippingReturn": "/shippings",
-    "checkoutAddress": "/checkout/address",
-    "checkoutPayment": "/checkout/payment",
-    "dashboard": "/dashboard"
+    "shippingReturn": "/shippings"
 }
