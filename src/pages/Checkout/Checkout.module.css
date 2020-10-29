@@ -1,9 +1,0 @@
-.CHECKOUT__left_col {
-    padding-left: 15%;
-}
-
-@media (max-width: 900px) {
-    .CHECKOUT__left_col {
-        padding-left: 5%;
-    }
-}
