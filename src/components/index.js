@@ -30,6 +30,3 @@ export { default as CartCard} from "./Cart/CartCard/CartCard"
 export { default as Notice } from "./Notice/Notice"
 
 export { default as TextContainer} from "./ShippingReturn/TextContainer/TextContainer"
-
-export { default as AddressInfo } from "./Checkout/AddressInfo/AddressInfo"
-export { default as PaymentLeftCol } from "./Checkout/Payment/PaymentLeftCol"
