@@ -8,11 +8,9 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 import routes from "./constants/routes.json"
 
 import { Home, ProductDetail, Contact, Shop, Cart, 
-    ShippingReturn, Checkout, NotFound } from "./pages"
+    ShippingReturn, NotFound } from "./pages"
 
 import Layout from "./pages/Layout"
-
-import { AddressInfo, PaymentLeftCol } from "./components"
 
 import "./styles/css/main.css"
 import 'antd/dist/antd.css';
@@ -56,18 +54,6 @@ export default function App() {
                     <Route path={routes.shippingReturn}>
                         <Layout>
                             <ShippingReturn />
-                        </Layout>
-                    </Route>
-
-                    <Route path={routes.checkoutAddress}>
-                        <Layout>
-                            <Checkout leftCol={<AddressInfo />} />
-                        </Layout>
-                    </Route> 
-
-                    <Route path={routes.checkoutPayment}>
-                        <Layout>
-                            <Checkout leftCol={<PaymentLeftCol />} />
                         </Layout>
                     </Route>
 
