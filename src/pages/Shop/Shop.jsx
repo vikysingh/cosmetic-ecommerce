@@ -15,7 +15,7 @@ const urls = {
 
 function Shop({ product, brand, minPrice, maxPrice }) {
 
-    const { error, loading, data, fetchProducts } = useFetchProducts()
+    const { loading, data, fetchProducts } = useFetchProducts()
 
     function formatUrl() {
 
