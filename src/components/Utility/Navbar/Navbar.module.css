@@ -4,8 +4,6 @@
     padding: 5px;
     
     justify-content: space-between;
- 
-    /* background-color: rgb(167, 162, 162); */
 }
 
 .NAVBAR__logo {
@@ -53,14 +51,7 @@
     font-size: 1.4rem;
 }
 
-@media (max-width: 760px) {
-    .NAVBAR {
-        /* position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #fff; */
-        z-index: 5;
-    }
+@media (max-width: 900px) {
     .NAVBAR__logo {
         font-size: 1rem;
     }
@@ -79,7 +70,7 @@
         flex-direction: column !important;
         justify-content: center;
         z-index: 5;
-        margin-top: 60px;
+        margin-top: -5px;
 
         transform: scaleY(0);
         transform-origin: top center;
@@ -101,10 +92,5 @@
     .NAVBAR__user_options {
         width: 20%;
         margin: 10px 0;
-    }
-
-    .NAVBAR:hover > .NAVBAR__content  {
-        transition: 300ms all ease;
-        transform: scaleY(1);
     }
 }

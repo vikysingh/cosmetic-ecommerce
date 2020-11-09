@@ -12,8 +12,6 @@ import PropTypes from "prop-types"
 
 function ProductQuantity({ cartProducts, id, dispatch, quantity }) {
 
-    console.log("log from quantity: ", cartProducts)
-
     return <div className={`flexRowStartCenter ${styles.PRODUCT_QUANTITY} `} >
         <PlusOutlined className={styles.PRODUCT_QUANTITY__btn}
         onClick={() => {
