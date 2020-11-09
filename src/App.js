@@ -21,7 +21,7 @@ export default function App() {
         <Provider store={store} >
             <BrowserRouter>
                 <Switch>
-                    <Route path={routes.home} exact={true}>
+                    <Route path={routes.home} exact>
                         <Layout>
                             <Home />
                         </Layout>
@@ -33,7 +33,7 @@ export default function App() {
                         </Layout>
                     </Route>
 
-                    <Route path={routes.productDetail} exact={true}>
+                    <Route path={routes.productDetail} exact>
                         <Layout>
                             <ProductDetail />
                         </Layout>
